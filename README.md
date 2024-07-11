@@ -4,6 +4,8 @@ Enhance your Kagi search experience with custom CSS animations and styles!
 
 ![Kagi CSS Demo](images/show-map.gif)
 ![Kagi CSS Demo](images/show-tiles.gif)
+![Kagi CSS Demo](images/search-result-fade-in.gif)
+
 
 ## Overview
 
