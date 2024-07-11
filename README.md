@@ -34,6 +34,6 @@ kagi-css includes several animations to make your search experience more dynamic
 
 ![Startpage Minimal](images/startpage-minimal.png)
 ![Startpage Extended](images/startpage-extended.png)
-![Search Results](images/search-result-with-wiki)
+![Search Results](images/search-result-with-wiki.png)
 
 Enjoy your enhanced Kagi search experience!
