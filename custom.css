@@ -1,0 +1,319 @@
+.text-underline {
+    text-decoration: none !important;
+}
+
+:root {
+        --font-main: lexend, sans-serif !important;
+}
+
+.theme_moon_dark :root {
+	--m_sri_gap_color: #222222 !important;
+        --app-text: #fdfdfd !important;
+}
+
+.theme_moon_dark {
+	--background-color: #222222 !important;
+}
+
+.theme_moon_dark body {
+	background-color: #222222 !important;
+	font-family: lexend, sans-serif;
+	color: rgb(255,255,255);
+}
+
+.theme_moon_dark ._0_app-wrapper, .theme_moon_dark .body-content, .theme_moon_dark .s-main-content-wrapper, .theme_moon_dark .set_header, .theme_moon_dark .main-content, .theme_moon_dark .a-w, .theme_moon_dark, .theme_moon_dark .quick-settings, .theme_moon_dark .header-small, .theme_moon_dark .app-sidebar-nav, .theme_moon_dark .__item, .theme_moon_dark .widget-body, .theme_moon_dark .card, .theme_moon_dark .card_thumb {
+	background-color: rgb(32,33,36) !important;
+}
+
+.theme_moon_dark .__sri-body {
+	font-size: 14px;
+	line-height: 1.58 !important;
+	color: #fdfdfd !important;
+}
+
+.theme_moon_dark .search_area {
+	margin-top: 4px !important;
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
+}
+
+.theme_moon_dar .__sri-title {
+	padding-left: 1px !important;
+}
+
+.theme_moon_dark button.btn {
+	background-color: rgb(48, 49, 52) !important;
+	border: 0 !important;
+	color: rgb(232,234,237) !important;
+	font-family: roboto, arial, sans-serif;
+}
+
+.theme_moon_dark .__sri_url_path_box {
+	padding-left: 2px !important;
+	font-size: 14px !important;
+}
+
+.theme_moon_dark .btn {
+	border: 0 !important;
+}
+
+.theme_moon_dark .__domain-favicon {
+	background-color: #202124 !important;
+	height: 24px !important;
+	width: 24px !important;
+	border-radius: 50% !important;
+}
+
+.theme_moon_dark .footer {
+	color: rgb(154,160,166);
+}
+
+.theme_moon_dark a {
+	color: #ff00d0 !important;
+	border-bottom: 0 !important;
+	text-decoration: none;
+}
+
+.theme_moon_dark a:hover {
+  color: rgb(138, 180, 248);
+  text-decoration: none;
+}
+
+.theme_moon_dark .search-input-container, .theme_moon_dark textarea {
+	background-color: #303134 !important;
+	min-height: 0 !important;
+}
+
+.theme_moon_dark .auto_suggestions, .theme_moon_dark .auto_suggestions_in, .theme_moon_dark .auto_suggestions_lenses, .theme_moon_dark .autosugg-landing {
+	background-color: rgb(48,49,52) !important;
+	/* border-color: rgb(229,229,220) !important; */
+	border: 0 !important;
+}
+
+.theme_moon_dark header, .theme_moon_dark .app-header {
+	border-bottom-color: rgb(60,64,67) !important;
+	background-color: rgb(32,33,36);
+}
+
+.theme_moon_dark .app-header a, .theme_moon_dark .serp-nav a {
+	color: rgb(189,193,198) !important;
+}
+
+.theme_moon_dark .__sri-desc, .theme_moon_dark .__sri-url-box, .theme_moon_dark .path, .theme_moon_dark span.host {
+	color: #303134 !important;
+	opacity: 1.0 !important;
+	font-size: 14px !important;
+	line-height: 22px !important;
+}
+
+.theme_moon_dark .__sri-url-box {
+	margin-bottom: 2px !important;
+	margin-left: -1px !important;
+}
+
+.theme_moon_dark h3 {
+	font-size: 20px !important;
+}
+
+.sri-group .sr-group {
+  padding-left: 30px !important;
+}
+
+/* disable the "found x results in x seconds" */
+.results_meta {
+  display:none;
+}
+
+/* black box at top */
+.app-header.app-content-box {
+  background-color: #1a1c23;
+  box-shadow: 0 7px 10px #1a1c23;
+}
+
+.correctedQuery {
+  line-height: 2;
+}
+
+.wikipedia_results {
+  background-color: #28282a;
+}
+
+/*Komisches Dialogfeld weg*/
+div.tooltip-trigger:nth-child(1) {
+  display:none;
+}
+
+.top_parent {
+  display:none;
+}
+
+
+.top-panel-box {
+  display:none;
+}
+
+.app-box-center {
+  margin-top: 2rem;
+}
+
+.read-more-inline {
+  background-color: #96befa;
+  color: #1b1b1b;
+  border-radius: 10px;
+  padding: 2px 8px 2px 8px;
+}
+
+.read-more-inline:hover {
+  background-color: #99b4ff;
+  color: #1b1b1b;
+}
+
+.read-more-inline svg {
+  transition: all 0.6s ease;
+}
+
+.read-more-inline:hover svg {
+  transform: translateX(5px);
+}
+
+.autoSugArrow svg {
+  transition: all 0.6s ease;
+}
+
+.autoSugArrow:hover svg {
+  transform: translateX(5px);
+}
+
+.auto_suggestions_lenses_edit_box:hover {
+  background-color: #99b4ff;
+}
+
+._0_results_summary_text {
+  color: #b3b7bb;
+}
+
+.wiki-nw-link {
+  color: #97bffb !important;
+}
+
+.__sri-time {
+  background-color: rgb(150, 190, 250, 0.8);
+  color: #1b1b1b;
+  user-select: none;
+}
+
+.doggo_sit_a {
+  display: none;
+}
+
+.sri-group,
+.search-result,
+.scene {
+    background-color: #1e2028;
+    border-radius: 12px;
+  opacity: 0; /* Anfangszustand unsichtbar */
+  transform: translateY(20px); /* Leicht nach unten verschoben */
+  animation: fadeInUp 0.6s ease-out forwards; /* Animation anwenden */
+}
+
+.__sri-title,
+.__sri_title_Link {
+    color: #7799e5;
+}
+
+.scene {
+    padding: 1rem;
+  opacity: 0; /* Anfangszustand unsichtbar */
+  transform: translateY(20px); /* Leicht nach unten verschoben */
+  animation: fadeInUp 0.6s ease-out forwards; /* Animation anwenden */
+}
+
+body,
+html,
+.mob {
+    background-color: #17191e;
+}
+
+.search-result {
+    padding-top: 1.2rem;
+    padding-right: 22px;
+    padding-bottom: 0.7rem;
+    padding-left: 18px;
+  opacity: 0; /* Anfangszustand unsichtbar */
+  transform: translateY(20px); /* Leicht nach unten verschoben */
+  animation: fadeInUp 0.6s ease-out forwards; /* Animation anwenden */
+}
+
+/* Keyframe-Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/** Auf einen Blick Kästchen*/
+.widgetContent {
+    background-color: #1e2028;
+    border-radius: 12px;
+    padding-top: 1.2rem;
+    padding-right: 22px;
+    padding-bottom: 0.7rem;
+    padding-left: 18px;
+    opacity: 0; /* Anfangszustand unsichtbar */
+    transform: translateY(20px); /* Leicht nach unten verschoben */
+    animation: fadeInUp 0.6s ease-out forwards; /* Animation anwenden */
+}
+
+.serp-nav .nav_item {
+  position: relative;
+}
+
+.serp-nav .nav_item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px; /* Höhe der Linie */
+  background-color: var(--nav_n_se_line); /* Farbe der Linie */
+  transform: scaleX(0); /* Startpunkt: unsichtbar */
+  transform-origin: left; /* Animation startet von links */
+  transition: transform 0.3s ease; /* Dauer und Timing der Animation */
+}
+
+.serp-nav .nav_item:hover:after {
+  transform: scaleX(1); /* Zielpunkt: komplett sichtbar */
+}
+
+/** Mehr anzeigen bei Settings */
+._0_more_search_box {
+  text-align: center;
+  width: 80%;
+}
+
+/** Disable show statistics - cause we disabled it in the custom css */
+._0_more_search_options_box {
+  display: none;
+}
+
+/* Remove bottom border from links */
+.__sri_title_link._0_sri_title_link._0_URL {
+  border-bottom: none;
+}
+
+/* Remove underline with nested links */
+.__srgi-title a {
+border-bottom: none; var(--result-item-title-border);
+}
+
+/* Remove underline with News module */
+.newsResultItem .newsResultHeader .newsResultTitle a._0_TITLE {
+  border-bottom: none; var(--result-item-title-border);
+}
+
+/* Remove underline from links in Wikipedia module */
+.wikipediaResult a {
+  border-bottom: none; var(--result-item-title-border);
+}
