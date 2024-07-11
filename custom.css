@@ -317,3 +317,8 @@ border-bottom: none; var(--result-item-title-border);
 .wikipediaResult a {
   border-bottom: none; var(--result-item-title-border);
 }
+
+/* Linse Background ist auch grau */
+.k_ui_dropdown_data_list {
+  background-color: #232325;
+}
