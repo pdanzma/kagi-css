@@ -30,4 +30,10 @@ kagi-css includes several animations to make your search experience more dynamic
 2. **Hover Effects**: Buttons and links have pleasant hover transitions.
 3. **Search Tiles**: Also have beautiful animations.
 
+## Preview
+
+![Startpage Minimal](images/startpage-minimal.png)
+![Startpage Extended](images/startpage-extended.png)
+![Search Results](images/search-result-with-wiki)
+
 Enjoy your enhanced Kagi search experience!
