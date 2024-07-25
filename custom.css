@@ -1,14 +1,15 @@
-.text-underline {
-    text-decoration: none !important;
-}
-
 :root {
-        --font-main: lexend, sans-serif !important;
+  --button-color: #F4B644;  /* Primärfarbe für die Buttons */
+  --button-hover-color: #E6AB40; /* Sekundärfarbe für die Buttons - beim Hovern - sollte leicht dunkler als die Button Farbe sein */
+  --source-highlight-color: #D9A23C; /* Farbe der Quellen und der kleinen Annotationen bei den Verweisen in der Schnellantwort */
+  --sri-hover-color: #F4B644; /* Farbe für das Hovern bei Suchergebnissen */
+
+  --font-main: lexend, sans-serif !important;
 }
 
 .theme_moon_dark :root {
-	--m_sri_gap_color: #222222 !important;
-        --app-text: #fdfdfd !important;
+  --m_sri_gap_color: #222222 !important;
+  --app-text: #fdfdfd !important;
 }
 
 .theme_moon_dark {
@@ -18,11 +19,11 @@
 .theme_moon_dark body {
 	background-color: #222222 !important;
 	font-family: lexend, sans-serif;
-	color: rgb(255,255,255);
+	color: #FFFFFF;
 }
 
 .theme_moon_dark ._0_app-wrapper, .theme_moon_dark .body-content, .theme_moon_dark .s-main-content-wrapper, .theme_moon_dark .set_header, .theme_moon_dark .main-content, .theme_moon_dark .a-w, .theme_moon_dark, .theme_moon_dark .quick-settings, .theme_moon_dark .header-small, .theme_moon_dark .app-sidebar-nav, .theme_moon_dark .__item, .theme_moon_dark .widget-body, .theme_moon_dark .card, .theme_moon_dark .card_thumb {
-	background-color: rgb(32,33,36) !important;
+	background-color: #202124 !important;
 }
 
 .theme_moon_dark .__sri-body {
@@ -42,9 +43,9 @@
 }
 
 .theme_moon_dark button.btn {
-	background-color: rgb(48, 49, 52) !important;
+	background-color: #303134 !important;
 	border: 0 !important;
-	color: rgb(232,234,237) !important;
+	color: #e8eaed !important;
 	font-family: roboto, arial, sans-serif;
 }
 
@@ -65,7 +66,7 @@
 }
 
 .theme_moon_dark .footer {
-	color: rgb(154,160,166);
+	color: #9aa0a6;
 }
 
 .theme_moon_dark a {
@@ -75,7 +76,7 @@
 }
 
 .theme_moon_dark a:hover {
-  color: rgb(138, 180, 248);
+  color: var(--sri-hover-color);
   text-decoration: none;
 }
 
@@ -85,18 +86,18 @@
 }
 
 .theme_moon_dark .auto_suggestions, .theme_moon_dark .auto_suggestions_in, .theme_moon_dark .auto_suggestions_lenses, .theme_moon_dark .autosugg-landing {
-	background-color: rgb(48,49,52) !important;
-	/* border-color: rgb(229,229,220) !important; */
+	background-color: #303134 !important;
+	/* border-color: #e5e5dc !important; */
 	border: 0 !important;
 }
 
 .theme_moon_dark header, .theme_moon_dark .app-header {
-	border-bottom-color: rgb(60,64,67) !important;
-	background-color: rgb(32,33,36);
+	border-bottom-color: #3c4043 !important;
+	background-color: #202124;
 }
 
 .theme_moon_dark .app-header a, .theme_moon_dark .serp-nav a {
-	color: rgb(189,193,198) !important;
+	color: #bdc1c6 !important;
 }
 
 .theme_moon_dark .__sri-desc, .theme_moon_dark .__sri-url-box, .theme_moon_dark .path, .theme_moon_dark span.host {
@@ -121,7 +122,7 @@
 
 /* disable the "found x results in x seconds" */
 .results_meta {
-  display:none;
+  display: none;
 }
 
 /* black box at top */
@@ -134,19 +135,25 @@
   line-height: 2;
 }
 
+/* Wikipedia-Artikel Widget Hintergrund */
 .wikipedia_results {
   background-color: #28282a;
 }
 
+.app-box-center {
+  margin-top: 2rem;
+}
+
+/* Mehr erfahren Button in Widget */
 .read-more-inline {
-  background-color: #96befa;
+  background-color: var(--button-color);
   color: #1b1b1b;
   border-radius: 10px;
   padding: 2px 8px 2px 8px;
 }
 
 .read-more-inline:hover {
-  background-color: #99b4ff;
+  background-color: var(--button-hover-color);
   color: #1b1b1b;
 }
 
@@ -158,6 +165,7 @@
   transform: translateX(5px);
 }
 
+/* Animation des Pfeils */
 .autoSugArrow svg {
   transition: all 0.6s ease;
 }
@@ -167,18 +175,19 @@
 }
 
 .auto_suggestions_lenses_edit_box:hover {
-  background-color: #99b4ff;
+  background-color: var(--sri-hover-color);
 }
 
 ._0_results_summary_text {
   color: #b3b7bb;
 }
 
+/* Wikipedia Link am Ende des Textabschnitts im Widget */
 .wiki-nw-link {
   color: #97bffb !important;
 }
 
-/* Datumsangabe */
+/* Zeitstempel-Kästchen unter dem Titel */
 .__sri-time {
   background-color: rgb(150, 190, 250, 0.8);
   color: #1b1b1b;
@@ -191,30 +200,34 @@
   user-select: none;
 }
 
+/* Entfernt Doggo-Icon
 .doggo_sit_a {
   display: none;
 }
+*/
 
+/* Container für Resultate */
 .sri-group,
 .search-result,
 .scene {
-    background-color: var(--ai_chat_buble_a_bg);
-    border-radius: 12px;
-  opacity: 0; /* Anfangszustand unsichtbar */
-  transform: translateY(20px); /* Leicht nach unten verschoben */
-  animation: fadeInUp 0.6s ease-out forwards; /* Animation anwenden */
+  background-color: #1e2028;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .__sri-title,
 .__sri_title_Link {
-    color: #7799e5;
+    color: var(--sri-hover-color);
 }
 
+/* Anfangsanimation des gesamten Bildschirmes */
 .scene {
-    padding: 1rem;
-  opacity: 0; /* Anfangszustand unsichtbar */
-  transform: translateY(20px); /* Leicht nach unten verschoben */
-  animation: fadeInUp 0.6s ease-out forwards; /* Animation anwenden */
+  padding: 1rem;
+  opacity: 0; 
+  transform: translateY(20px); 
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 body,
@@ -223,14 +236,15 @@ html,
     background-color: #17191e;
 }
 
+/* Resultate der Suche */
 .search-result {
-    padding-top: 1.2rem;
-    padding-right: 22px;
-    padding-bottom: 0.7rem;
-    padding-left: 18px;
-  opacity: 0; /* Anfangszustand unsichtbar */
-  transform: translateY(20px); /* Leicht nach unten verschoben */
-  animation: fadeInUp 0.6s ease-out forwards; /* Animation anwenden */
+  padding-top: 1.2rem;
+  padding-right: 22px;
+  padding-bottom: 0.7rem;
+  padding-left: 18px;
+  opacity: 0; 
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 /* Keyframe-Animation */
@@ -241,23 +255,24 @@ html,
   }
 }
 
-/** Auf einen Blick Kästchen*/
+/* Auf einen Blick Kästchen */
 .widgetContent {
-    background-color: var(--ai_chat_buble_a_bg);
+    background-color: #1e2028;
     border-radius: 12px;
     padding-top: 1.2rem;
     padding-right: 22px;
     padding-bottom: 0.7rem;
     padding-left: 18px;
-    opacity: 0; /* Anfangszustand unsichtbar */
-    transform: translateY(20px); /* Leicht nach unten verschoben */
-    animation: fadeInUp 0.6s ease-out forwards; /* Animation anwenden */
+    opacity: 0; 
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .serp-nav .nav_item {
   position: relative;
 }
 
+/* Animierte Linie unter Web, Bilder, Videos, etc */
 .serp-nav .nav_item:after {
   content: "";
   display: block;
@@ -265,15 +280,15 @@ html,
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px; /* Höhe der Linie */
-  background-color: var(--nav_n_se_line); /* Farbe der Linie */
-  transform: scaleX(0); /* Startpunkt: unsichtbar */
-  transform-origin: left; /* Animation startet von links */
-  transition: transform 0.3s ease; /* Dauer und Timing der Animation */
+  height: 4px;
+  background-color: var(--nav_n_se_line);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .serp-nav .nav_item:hover:after {
-  transform: scaleX(1); /* Zielpunkt: komplett sichtbar */
+  transform: scaleX(1);
 }
 
 /** Mehr anzeigen bei Settings */
@@ -282,27 +297,30 @@ html,
   width: 80%;
 }
 
-/** Disable show statistics - cause we disabled it in the custom css */
+/* Statistiken ausblenden - unnötig, da bereits in Settings */
+/*
 ._0_more_search_options_box {
   display: none;
 }
+*/
 
-/* Remove bottom border from links */
+
+/* Remove bottom border from links - kopiert von Wiki */
 .__sri_title_link._0_sri_title_link._0_URL {
   border-bottom: none;
 }
 
-/* Remove underline with nested links */
+/* Remove underline with nested links - kopiert von Wiki */
 .__srgi-title a {
-  border-bottom: none; var(--result-item-title-border);
+border-bottom: none; var(--result-item-title-border);
 }
 
-/* Remove underline with News module */
+/* Remove underline with News module - kopiert von Wiki */
 .newsResultItem .newsResultHeader .newsResultTitle a._0_TITLE {
   border-bottom: none; var(--result-item-title-border);
 }
 
-/* Remove underline from links in Wikipedia module */
+/* Remove underline from links in Wikipedia module - kopiert von Wiki */
 .wikipediaResult a {
   border-bottom: none; var(--result-item-title-border);
 }
@@ -316,14 +334,14 @@ html,
 ._0_results_summary_box {
   border-bottom: 1px solid var(--primary-200);
   margin-bottom: 30px;
-  background-color: var(--ai_chat_buble_a_bg);
+  background-color: #1e2028;
   border-radius: 22px;
   padding: 20px;
 }
 
 /* Angleichung des Gradienten */
 .results_summary_text_box:has(#qa_show_more:not(:checked)) .smw::before {
-  background: linear-gradient(transparent, var(--ai_chat_buble_a_bg));
+  background: linear-gradient(transparent,#1e2028);
 }
 
 /* Dialogfeld mit Land, Zeit, etc weg, außer Schnellantwortbutton */
@@ -333,15 +351,15 @@ html,
 
 /* Schnellantwort Button */
 ._0_summarize_link {
-  background-color: #96befa;
-  max-width: 150px;
+  background-color: var(--button-color);
+  max-width: max-content;
   margin-bottom: 10px;
   border-radius: 10px !important;
   padding: 5px 10px 5px 10px;
 }
 
 ._0_summarize_link:hover {
-  background-color: #99b4ff;
+  background-color: var(--button-hover-color);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -365,26 +383,133 @@ html,
   display: none !important;
 }
 
+/* Weiter in Assistent */
 ._0_results_summary_link_to_IA {
-  max-width: 185px;
+  background-color: var(--button-color);
+  max-width: max-content;
   padding-right: 10px;
   border-radius: 10px;
-  border: solid;
-  border-color: #fdfdfd;
   margin-top: 15px;
 }
 
 ._0_results_summary_link_to_IA:hover {
-  background-color: #99b4ff;
-  border-color: #96befa;
+  background-color: var(--button-hover-color);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-} 
+}  
 
-/* Instant answer (e.g. quick math) */
-.instant-answer {
-  margin-bottom: 20px;
-  border-radius: 12px;
-  background-color: var(--ai_chat_buble_a_bg);
-  padding-left: 15px;
-  padding-right: 15px;
+/* kleine Annotationen bei Schnellantwort Quellen */
+.results_summary_text_box sup a {
+  border-radius: 50%;
+  background-color: #2D2F2F;
+  color: #8D9191;
+  padding: 1px 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.results_summary_text_box sup a:hover {
+  background-color: var(--source-highlight-color);
+  color: #F2FCFC;
+}
+
+/* farblich hervorgehobene Quelle */
+._0_results_summary_links a {
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-radius: 3px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+._0_results_summary_links a.__0_highlight {
+  transform: translateX(3px);
+  background-color: var(--source-highlight-color);
+}
+
+/* kleiner Kasten mit Main URL der Quelle */
+._0_results_summary_links .__domain-name {
+  user-select: none;
+}
+
+/* kleines Experiment mit Hinweis am Ende von KI-generiertem Inhalt
+._0_results_summary_links:after {
+    margin-top: 5px;
+    font-size: .75rem;
+    content: "KI-generierte Antwort. Verifizieren Sie die Fakten.";
+}
+*/
+
+/* WolframAlpha Widget */
+.widget .wasb {
+  background-color: #1e2028;
+}
+
+/* Titel des Widgets von WolframAlpha */
+.wasb-title {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 450;
+}
+
+/* Normales WolframAlpha Widget (= xxx) */
+.wolfram-answer {
+  background-color: #1e2028;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* "Frage zur Webseite stellen" Button bei Summarizer */
+._0_discuss_document_btn {
+  background-color: var(--button-color);
+  color: #1b1b1b;
+  border-radius: 10px;
+  padding: 2px 8px 2px 8px;
+  max-width: max-content;
+  position: relative;
+  margin-top: 1rem;
+}
+
+._0_discuss_document_btn:hover {
+  background-color: var(--button-hover-color);
+  color: #1b1b1b;
+}
+
+._0_discuss_document_btn svg {
+  transition: all 0.6s ease;
+}
+
+._0_discuss_document_btn:hover svg {
+  transform: translateX(5px);
+}
+
+/* Mehr anzeigen Button bei Schnellantwort */
+.smw {
+  background-color: var(--button-color);
+  color: #1b1b1b;
+  border-radius: 10px;
+  padding: 2px 8px 2px 8px;
+  max-width: max-content;
+  position: relative;
+  margin-top: 10px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.smw:hover {
+  background-color: var(--button-hover-color);
+  color: #1b1b1b;
+}
+
+.smw svg {
+  transition: all 0.6s ease;
+}
+
+.smw:hover svg {
+  transform: translateX(3px);
+}
+
+/* Linear Gradient vor dem Mehr anzeigen Kästchen */
+.results_summary_text_box:has(#qa_show_more:not(:checked)) .smw::before {
+    background: linear-gradient(transparent, #1e2028);
+  /* width: 100%; Fehlerhaft, da er die Maße vom Button nimmt und nicht vom darüberliegenden Container */
 }
