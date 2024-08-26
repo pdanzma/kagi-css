@@ -3,7 +3,26 @@
   --button-hover-color: #E6AB40; /* Sekundärfarbe für die Buttons - beim Hovern - sollte leicht dunkler als die Button Farbe sein */
   --source-highlight-color: #D9A23C; /* Farbe der Quellen und der kleinen Annotationen bei den Verweisen in der Schnellantwort */
   --sri-hover-color: #F4B644; /* Farbe für das Hovern bei Suchergebnissen */
+  --color-search-input: #1e2028; /* Farbe für Search Box */
+  --color-search-input-border: var(--graphite-900);
+  --time-stamp: rgba(69, 69, 73, 0.8); /* Farbe für Zeitstempel mit Alpha-Wert, alt:  rgba(150, 190, 250, 0.8)*/
+  --new-white: rgb(226, 226, 226); /* experimental */
+  --new-black: rgb(29, 29, 29); /* experimental */
 }
+
+/**
+* NEU
+*
+* - Podcasts haben jetzt kleine Buttons 
+* - Farbbug gefixt bei Bilder und Videos
+* - Zeitstempel sind nun weniger auffällig
+* - News wurden dem anderen UI Design angeglichen
+* - Angleichung Video UI Design
+*/
+
+/* "Suchen" Button auf Startseite - experimental
+.btn.--primary {
+} */
 
 /* sticky header */
 .app-header.app-content-box {
@@ -15,10 +34,11 @@
   background: rgba(26, 28, 35, 0.2);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
-  box-shadow: 0 7px 10px #1a1c23;
+  /*box-shadow: 0 7px 10px #1a1c23;*/
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .7);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 2px solid rgba(35, 35, 37, 0.7);
+  border: 1px solid rgba(35, 35, 37, 0.3);
 }
 
 /* Quick Settings Panel */
@@ -103,6 +123,7 @@
 .theme_moon_dark a:hover {
   color: var(--sri-hover-color);
   text-decoration: none;
+  transition: all .5s ease;
 }
 
 .theme_moon_dark .search-input-container, .theme_moon_dark textarea {
@@ -114,6 +135,7 @@
 	background-color: #303134 !important;
 	/* border-color: #e5e5dc !important; */
 	border: 0 !important;
+  transition: all .5s ease;
 }
 
 .theme_moon_dark header, .theme_moon_dark .app-header {
@@ -141,14 +163,22 @@
 	font-size: 20px !important;
 }
 
+/* Positionierung des Unterergebnisses */
 .sri-group .sr-group {
   padding-left: 30px !important;
+  padding-bottom: 10px;
 }
 
-/* disable the "found x results in x seconds" */
+/* disable the "found x results in x seconds" 
 .results_meta {
   display: none;
-}
+} */
+
+/* black box at top
+.app-header.app-content-box {
+  background-color: #1a1c23;
+  box-shadow: 0 7px 10px #1a1c23;
+} */
 
 .correctedQuery {
   line-height: 2;
@@ -157,6 +187,11 @@
 /* Wikipedia-Artikel Widget Hintergrund */
 .wikipedia_results {
   background-color: #28282a;
+}
+
+/* Angleichung der Hintergrundfarbe bei Bilder und Videos */
+.app-box {
+  background-color: #17191e;
 }
 
 .app-box-center {
@@ -177,10 +212,12 @@
 }
 
 .read-more-inline svg {
+  color: #1b1b1b;
   transition: all 0.6s ease;
 }
 
 .read-more-inline:hover svg {
+  color: #1b1b1b;
   transform: translateX(5px);
 }
 
@@ -208,8 +245,8 @@
 
 /* Zeitstempel-Kästchen unter dem Titel */
 .__sri-time {
-  background-color: rgb(150, 190, 250, 0.8);
-  color: #1b1b1b;
+  background-color: var(--time-stamp);
+  color: var(--primary-700); /* old: #1b1b1b */
   user-select: none;
 }
 
@@ -236,9 +273,9 @@
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-.__sri-title,
-.__sri_title_Link {
-    color: var(--sri-hover-color);
+.__sri-title, .__sri_title_link {
+  /*color: var(--sri-hover-color);*/
+  transition: all .5s ease;
 }
 
 /* Anfangsanimation des gesamten Bildschirmes */
@@ -388,6 +425,7 @@ border-bottom: none; var(--result-item-title-border);
 ._0_summarize_link:hover {
   background-color: var(--button-hover-color);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all .5s ease;
 }
 
 ._0_summarize_link svg {
@@ -422,6 +460,7 @@ border-bottom: none; var(--result-item-title-border);
 ._0_results_summary_link_to_IA:hover {
   background-color: var(--button-hover-color);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all .5s ease;
 }  
 
 /* kleine Annotationen bei Schnellantwort Quellen */
@@ -436,6 +475,7 @@ border-bottom: none; var(--result-item-title-border);
 .results_summary_text_box sup a:hover {
   background-color: var(--source-highlight-color);
   color: #F2FCFC;
+  transition: all .5s ease;
 }
 
 /* Vergrößerter Abstand zwischen Quellen und Button */
@@ -455,6 +495,7 @@ border-bottom: none; var(--result-item-title-border);
 ._0_results_summary_links a.__0_highlight {
   transform: translateX(3px);
   background-color: var(--source-highlight-color);
+  color: var(--resultsummary-highlight_text);
 }
 
 /* beim hovern über die Quelle mit der Maus */
@@ -576,6 +617,7 @@ border-bottom: none; var(--result-item-title-border);
   background-color: var(--k-tooltip-text);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
   width: 500px;
+  z-index: 115;
 }
 
 /* kleines Quadrat als Hinführung */
@@ -597,4 +639,132 @@ border-bottom: none; var(--result-item-title-border);
 /* sanfter Übergang beim Hovern */
 .btn.--primary {
   transition: background-color 0.5s ease;
+}
+
+/* Infoseite bei Datenschutz-Check */
+.ranked-c-adjust-info-icon:not(.new-tooltip) .k-tooltip, .tooltip-trigger:not(.new-tooltip) .k-tooltip {
+  background-color: var(--k-tooltip-text);
+  color: #FDFDFD;
+}
+
+/* Widgets wie YouTube */
+.widgetContent .widgetItems .widgetItem {
+  background-color: #17191e;
+  transition: all .5s ease;
+}
+
+/* Preview des Videos  bei YT Widget */
+.widgetItem .videoResultThumbnail img {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* search bar shadow */
+.search-form .search-input-container, .search-form .search-input-container-kids {
+  box-shadow: 1px 8px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Infobox des Paywallsicons */
+.paywall-icon .paywall-tooltip {
+  color: var(--k-tooltip-bg);
+  background-color: var(--k-tooltip-text);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons bei Bildern */
+.btn.--secondary-light-s:hover {
+  border:1px solid var(--primary-hover);
+  color:var(--primary-hover);
+  transition: all .5s ease;
+}
+
+/* Widget-Header */
+.inlineHeader {
+  transition: all .5s ease;
+}
+
+/* Videos Hintergrund */
+.videoResultItem {
+  background-color: #1e2028;
+}
+
+/* Video-Zeitstempel */
+.videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate {
+  background-color: var(--time-stamp);
+  color: var(--primary-700); /* old: #1b1b1b */
+  border-radius: 5px;
+  padding: 0 6px;
+}
+
+/* Video-Aufrufezahlen */
+.videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate, .videoResultItem .videoResultRight .videoResultInfo .videoViewsCount {
+  background-color: var(--time-stamp);
+  color: var(--primary-700); /* old: #1b1b1b */
+  border-radius: 5px;
+  padding: 0 6px;
+}
+
+/* News Results einheitliches UI Design */
+.newsResultItem {
+  background-color: #1e2028;
+  border-radius: 12px;
+
+  padding-top: 1.2rem;
+  padding-right: 22px;
+  padding-bottom: 0.7rem;
+  padding-left: 18px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.newsResultItem:first-child {
+  padding-top: 1.2rem;
+}
+
+/* Zeitstempel bei News */
+.newsResultItem .newsResultTime {
+  background-color: var(--time-stamp);
+  color: var(--primary-700); /* old: #1b1b1b */
+  border-radius: 5px;
+  padding: 0 6px;
+}
+
+/* Podcasts: kleine Buttons bei Infos zum Podcast */
+.podcast_result .episode_meta>div+div {
+  background-color: var(--time-stamp);
+  color: var(--primary-700); /* old: #1b1b1b */
+  border-radius: 5px;
+  padding: 0 6px;
+}
+
+/* Erstes Element */
+.podcast_result .body .content .podcast_publisher {
+  background-color: var(--time-stamp);
+  color: var(--primary-700); /* old: #1b1b1b */
+  border-radius: 5px;
+  padding: 0 6px;
+}
+
+.podcast_result .body .content .podcast_publisher i {
+  color: var(--primary-700); /* old: #1b1b1b */
+}
+
+.podcast_result .podcast_duration {
+  background-color: var(--time-stamp);
+  color: var(--primary-700); /* old: #1b1b1b */
+  border-radius: 5px;
+  padding: 0 6px;
+}
+
+/* Zeitstempel bei Videos */
+.widget-time-ago {
+  background-color: rgba(150, 190, 250, 0.8);
+  color: #1b1b1b;
+  user-select: none;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0 6px;
+  margin-bottom: auto;
+  margin-top: auto;
 }
