@@ -1,0 +1,320 @@
+:root {
+    --button-color: #F4B644;
+    --button-hover-color: #E6AB40;
+    --source-highlight-color: #D9A23C;
+    --sri-hover-color: #F4B644;
+    --color-search-input: #1e2028;
+    --color-search-input-border: var(--graphite-900);
+    --time-stamp: rgba(69, 69, 73, 0.8);
+    --m_sri_gap_color: #222222 !important;
+    --app-text: #fdfdfd !important;
+  }
+  
+  /* Gemeinsame Stile für verschiedene Elemente */
+  ._0_TITLE.__sri-title,
+  .__sri-url-box,
+  .newsResultItem,
+  .podcast_result,
+  .sri-group,
+  .search-result,
+  .scene,
+  .widgetContent {
+    background-color: #1e2028;
+    border-radius: 12px;
+    padding: 1.2rem 22px 0.7rem 18px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  /* Gemeinsame Stile für Zeitstempel und kleine Buttons */
+  .videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate,
+  .videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate,
+  .videoResultItem .videoResultRight .videoResultInfo .videoViewsCount,
+  .newsResultItem .newsResultTime,
+  .podcast_result .episode_meta > div + div,
+  .podcast_result .body .content .podcast_publisher,
+  .podcast_result .podcast_duration,
+  .widget-time-ago,
+  .__sri-time,
+  .__sri-time.--new {
+    background-color: var(--time-stamp);
+    color: var(--primary-700);
+    border-radius: 5px;
+    padding: 0 6px;
+    user-select: none;
+  }
+  
+  /* Gemeinsame Hover-Effekte */
+  .podcast_result .episode_meta > div + div:hover,
+  .podcast_result .body .content .podcast_publisher:hover,
+  .podcast_result .podcast_duration:hover,
+  .podcast_result .body .content .podcast_publisher:hover i {
+    background-color: rgba(150, 190, 250, 0.8);
+    color: #1b1b1b;
+  }
+  
+  /* Gemeinsame Stile für Buttons */
+  ._0_summarize_link,
+  ._0_results_summary_link_to_IA,
+  ._0_discuss_document_btn,
+  .smw {
+    background-color: var(--button-color);
+    color: #232325 !important;
+    border-radius: 10px;
+    padding: 5px 10px;
+    max-width: max-content;
+    transition: all .5s ease;
+  }
+  
+  ._0_summarize_link:hover,
+  ._0_results_summary_link_to_IA:hover,
+  ._0_discuss_document_btn:hover,
+  .smw:hover {
+    background-color: var(--button-hover-color);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animation für Pfeile */
+  ._0_summarize_link svg,
+  ._0_discuss_document_btn svg,
+  .smw svg,
+  .autoSugArrow svg {
+    transition: all 0.6s ease;
+  }
+  
+  ._0_summarize_link:hover .ic svg,
+  ._0_discuss_document_btn:hover svg,
+  .smw:hover svg,
+  .autoSugArrow:hover svg {
+    transform: translateX(5px);
+  }
+  
+  /* Gemeinsame Stile für Tooltips */
+  .ks-tooltip-body,
+  .tooltip_base,
+  .ranked-c-adjust-info-icon:not(.new-tooltip) .k-tooltip,
+  .tooltip-trigger:not(.new-tooltip) .k-tooltip,
+  .paywall-icon .paywall-tooltip {
+    background-color: var(--k-tooltip-text);
+    color: #FDFDFD;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Entfernung von doppelten Deklarationen und Zusammenfassung ähnlicher Stile */
+  
+  body,
+  html,
+  .mob {
+    background-color: #17191e;
+    font-family: var(--font-lufga), system-ui;
+  }
+  
+  .app-header.app-content-box {
+    position: sticky;
+    top: 0;
+    z-index: 114;
+    background: rgba(26, 28, 35, 0.2);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(35, 35, 37, 0.3);
+  }
+  
+  .quick-settings {
+    background: rgba(32, 33, 36, 0.6);
+    border-radius: 16px 0 0 16px;
+    box-shadow: 0 7px 10px #1a1c23;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(35, 35, 37, 0.7);
+  }
+  
+  .search_area {
+    margin-top: 4px !important;
+    padding: 4px 0 !important;
+  }
+  
+  .sri-group .sr-group {
+    padding-left: 30px !important;
+    padding-bottom: 10px;
+  }
+  
+  .app-box {
+    background-color: #17191e;
+  }
+  
+  .app-box-center {
+    margin-top: 2rem;
+  }
+  
+  ._0_results_summary_text {
+    color: #b3b7bb;
+  }
+  
+  .wiki-nw-link {
+    color: #97bffb !important;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Entfernung von redundanten Selektoren und Zusammenfassung ähnlicher Stile */
+  
+  .serp-nav .nav_item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--nav_n_se_line);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .serp-nav .nav_item:hover:after,
+  ._0_sri-w-highlight .serp-nav .nav_item.searchResultAnswer:after,
+  .serp-nav ._0_sri-w-highlight .nav_item.searchResultAnswer:after,
+  .serp-nav .nav_item.--active:after {
+    transform: scaleY(1);
+  }
+  
+  /* Entfernung von Unterstreichungen */
+  .__sri_title_link._0_sri_title_link._0_URL,
+  .__srgi-title a,
+  .newsResultItem .newsResultHeader .newsResultTitle a._0_TITLE,
+  .wikipediaResult a {
+    border-bottom: none;
+  }
+  
+  .k_ui_dropdown_data_list {
+    background-color: #232325;
+  }
+  
+  ._0_results_summary_box {
+    border-bottom: 1px solid var(--primary-200);
+    margin-bottom: 30px;
+    background-color: #1e2028;
+    border-radius: 22px;
+    padding: 20px;
+  }
+  
+  .results_summary_text_box:has(#qa_show_more:not(:checked)) .smw::before {
+    background: linear-gradient(transparent, #1e2028);
+  }
+  
+  ._0_filters-panel {
+    display: none;
+  }
+  
+  ._0_summarize_link {
+    margin-bottom: 10px;
+  }
+  
+  ._0_summarize_link a {
+    color: #232325 !important;
+  }
+  
+  .top-content .top-content ._0_provider-content {
+    display: none !important;
+  }
+  
+  ._0_results_summary_link_to_IA {
+    margin-top: 15px;
+  }
+  
+  .results_summary_text_box sup a {
+    border-radius: 50%;
+    background-color: #2D2F2F;
+    color: #8D9191;
+    padding: 1px 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .results_summary_text_box sup a:hover {
+    background-color: var(--source-highlight-color);
+    color: #F2FCFC;
+  }
+  
+  ._0_results_summary_links {
+    margin-bottom: 30px;
+  }
+  
+  ._0_results_summary_links a {
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  ._0_results_summary_links a.__0_highlight,
+  ._0_results_summary_links a:hover {
+    transform: translateX(3px);
+    background-color: var(--source-highlight-color);
+    color: var(--resultsummary-highlight_text);
+  }
+  
+  ._0_results_summary_links .__domain-name {
+    user-select: none;
+  }
+  
+  .widget .wasb,
+  .wolfram-answer {
+    background-color: #1e2028;
+  }
+  
+  .wasb-title {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 450;
+  }
+  
+  .wolfram-answer {
+    margin-bottom: 25px;
+    border-radius: 10px;
+    padding: 0 10px;
+  }
+  
+  .related-items a {
+    background-color: #1e2028;
+    transition: all .5s ease;
+  }
+  
+  .footer-search-results #load_more_results,
+  .btn.--primary {
+    transition: all .5s ease;
+  }
+  
+  .widgetContent .widgetItems .widgetItem {
+    background-color: #17191e;
+    transition: all .5s ease;
+  }
+  
+  .widgetItem .videoResultThumbnail img {
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .search-form .search-input-container,
+  .search-form .search-input-container-kids {
+    box-shadow: 1px 8px 30px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn.--secondary-light-s:hover {
+    border: 1px solid var(--primary-hover);
+    color: var(--primary-hover);
+    transition: all .5s ease;
+  }
+  
+  .inlineHeader {
+    transition: all .5s ease;
+  }
