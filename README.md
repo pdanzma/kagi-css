@@ -1,10 +1,4 @@
-# Custom CSS File for Kagi Search Engine
-
-![First Release](https://img.shields.io/badge/First%20Release-Important-blue)
-
-> **Achtung!** 🆕
-> 
-> This is the first release and there are many new features! Including glass morphism, transition for almost all buttons, uniform colors and animations and much more.
+# Glassmorphism Style CSS File for Kagi Search Engine
 
 Enhance your Kagi search experience with custom CSS animations and styles! It's a general overhaul of the search engine user interface and user experience.
 
@@ -59,21 +53,4 @@ kagi-css includes several animations to make your search experience more dynamic
 
 If you have an idea that would extend / complete the look of Kagi or if you have found a bug, please write to me on Discord or write in Discord: kagi-discussions -> “UI Design Ideas for my custom css”.
 
-## Note
-
-Since someone in the Discord server missed the little doggo on the start page, it has now been made visible again with this update. However, the code is only commented out, so it can be hidden again at any time.
-```
-/* Entfernt Doggo-Icon
-.doggo_sit_a {
-  display: none;
-}
-*/
-```
-
-![Doggo](images/doggo.png)
-
-Another feature is the new WolframAlpha widget, but it is still buggy, so I can't take a picture of it, except the preview of the searchbar.
-
-![WolramAlpha Widget](images/wolfram-quick-answer.png)
----
 # Enjoy your enhanced Kagi search experience!
