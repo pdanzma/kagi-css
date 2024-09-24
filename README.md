@@ -25,12 +25,19 @@ kagi-css is a custom CSS file to beautify and liven up the Kagi search engine in
 - **Enhanced UI Elements**: Improved buttons, search bar, and results layout
 - **Responsive Design**: Looks great on both desktop and mobile devices
 - **Easy color changes**: There is a field at the beginning where you can easily change the most important colors as you wish
+- **Uniform Design**: The design now extends to almost all pages, be it results, images, videos, news or podcasts.
+  
 ```
 :root {
   --button-color: #F4B644;  /* Primärfarbe für die Buttons */
   --button-hover-color: #E6AB40; /* Sekundärfarbe für die Buttons - beim Hovern - sollte leicht dunkler als die Button Farbe sein */
   --source-highlight-color: #D9A23C; /* Farbe der Quellen und der kleinen Annotationen bei den Verweisen in der Schnellantwort */
   --sri-hover-color: #F4B644; /* Farbe für das Hovern bei Suchergebnissen */
+  --color-search-input: #1e2028; /* Farbe für Search Box */
+  --color-search-input-border: var(--graphite-900);
+  --time-stamp: rgba(69, 69, 73, 0.8); /* Farbe für Zeitstempel mit Alpha-Wert, alt:  rgba(150, 190, 250, 0.8)*/
+  --m_sri_gap_color: #222222 !important;
+  --app-text: #fdfdfd !important;
 }
 ```
 
