@@ -10,6 +10,81 @@
   --app-text: #fdfdfd !important;
 }
 
+/* Schild-Pupup */
+.d-info-section {
+  background-color: #1e2028;
+}
+
+.d-info-body {
+  background-color: #17191e;
+}
+
+.d-info-section-desc.col {
+  background-color: transparent;
+}
+
+/* Benachrichtigungsfeld */
+._0_copied_tooltip {
+  background-color: #1e2028;
+  border: 1px solid var(--button-color);
+}
+
+/* weitere Frage zu Webseite stellen Dialog */
+.question_form_box .q_form_wrapper {
+  background-color: transparent;
+}
+
+/* Hervorhebung von Seitenzusammenfassung */
+._0_result_page_summary {
+  background-color: #17191e;
+  padding: 8px;
+  border-radius: 5px;
+  border: .5px dashed var(--button-color);
+  line-height: 1.5rem;
+}
+
+/* 404 */
+.not-found-box .rect {
+  border: 1px dashed #fd0130;
+}
+
+/* Abmelden Button bei Seitenleiste */
+.quick-settings-footer {
+  border-top: 1px solid var(--button-color);
+  border-radius: 8px;
+}
+
+/* Quelle für Bilder */
+.image-preview-wrapper #PreviewImageUrl {
+  max-width: fit-content;
+  background-color: #17191e;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-hover);
+  margin-top: 5px;
+}
+
+/* kleines Rechteck bei Bilder -> Hochgeladen Pupup */
+.ranked-c-adjust-info-icon:not(.new-tooltip) .k-tooltip:after, .tooltip-trigger:not(.new-tooltip) .k-tooltip:after {
+  border-top: 8px solid var(--secondary);
+}
+
+/* URL-Leiste bei Nachrichten */
+.newsResultItem .newsResultHeader .sourceAndTime {
+  background-color: #17191e;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.instant-answer {
+  padding-bottom: 10px;
+  padding-left: 14px;
+  background-color: #1e2028;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: rgba(244, 182, 68, 0.4) 5px 5px, rgba(244, 182, 68, 0.3) 10px 10px, rgba(244, 182, 68, 0.2) 15px 15px, rgba(244, 182, 68, 0.1) 20px 20px;
+}
+
 /* small pdf icon */
 .ext_icon {
   border: 1px solid var(--button-color);
@@ -40,15 +115,6 @@
 .top_podcast_item:hover {
     text-decoration: none;
 }
-
-/* Suchergebnisse Title
-._0_TITLE.__sri-title {
-  margin-bottom: 0px;
-  background-color: #17191e;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  padding: 4px;
-} */
 
 /* Abstand unter URL */
 .__sri-url-box {
@@ -440,7 +506,7 @@ html,
 
 /* Remove underline with nested links - kopiert von Wiki */
 .__srgi-title a {
-  border-bottom: none; var(--result-item-title-border);
+border-bottom: none; var(--result-item-title-border);
 }
 
 /* Remove underline with News module - kopiert von Wiki */
