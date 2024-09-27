@@ -1,10 +1,4 @@
-# Custom CSS File for Kagi Search Engine
-
-![First Release](https://img.shields.io/badge/First%20Release-Important-blue)
-
-> **Achtung!** 🆕
-> 
-> This is the first release and there are many new features! Including glass morphism, transition for almost all buttons, uniform colors and animations and much more.
+# Glassmorphism Style CSS File for Kagi Search Engine
 
 Enhance your Kagi search experience with custom CSS animations and styles! It's a general overhaul of the search engine user interface and user experience.
 
@@ -31,12 +25,19 @@ kagi-css is a custom CSS file to beautify and liven up the Kagi search engine in
 - **Enhanced UI Elements**: Improved buttons, search bar, and results layout
 - **Responsive Design**: Looks great on both desktop and mobile devices
 - **Easy color changes**: There is a field at the beginning where you can easily change the most important colors as you wish
+- **Uniform Design**: The design now extends to almost all pages, be it results, images, videos, news or podcasts.
+  
 ```
 :root {
   --button-color: #F4B644;  /* Primärfarbe für die Buttons */
   --button-hover-color: #E6AB40; /* Sekundärfarbe für die Buttons - beim Hovern - sollte leicht dunkler als die Button Farbe sein */
   --source-highlight-color: #D9A23C; /* Farbe der Quellen und der kleinen Annotationen bei den Verweisen in der Schnellantwort */
   --sri-hover-color: #F4B644; /* Farbe für das Hovern bei Suchergebnissen */
+  --color-search-input: #1e2028; /* Farbe für Search Box */
+  --color-search-input-border: var(--graphite-900);
+  --time-stamp: rgba(69, 69, 73, 0.8); /* Farbe für Zeitstempel mit Alpha-Wert, alt:  rgba(150, 190, 250, 0.8)*/
+  --m_sri_gap_color: #222222 !important;
+  --app-text: #fdfdfd !important;
 }
 ```
 
@@ -59,21 +60,4 @@ kagi-css includes several animations to make your search experience more dynamic
 
 If you have an idea that would extend / complete the look of Kagi or if you have found a bug, please write to me on Discord or write in Discord: kagi-discussions -> “UI Design Ideas for my custom css”.
 
-## Note
-
-Since someone in the Discord server missed the little doggo on the start page, it has now been made visible again with this update. However, the code is only commented out, so it can be hidden again at any time.
-```
-/* Entfernt Doggo-Icon
-.doggo_sit_a {
-  display: none;
-}
-*/
-```
-
-![Doggo](images/doggo.png)
-
-Another feature is the new WolframAlpha widget, but it is still buggy, so I can't take a picture of it, except the preview of the searchbar.
-
-![WolramAlpha Widget](images/wolfram-quick-answer.png)
----
 # Enjoy your enhanced Kagi search experience!

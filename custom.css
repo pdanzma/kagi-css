@@ -10,23 +10,160 @@
   --app-text: #fdfdfd !important;
 }
 
-/* Suchergebnisse Title */
-._0_TITLE.__sri-title {
-  margin-bottom: 0px;
+:focus-visible {
+  outline: 1px solid #ffb319;
+}
+
+/* Background bei Advanced Settings */
+.advanced-search-modal-backdrop::before {
+  background-color: #121213;
+}
+
+/* Wiki-Link */
+a.wiki-nw-link {
+  background-color: var(--button-color);
+  border-radius: 7px;
+  margin-top: 10px;
+  padding: 5px;
+  transition: all 0.5s ease;
+}
+
+a.wiki-nw-link:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Text des Buttons */
+.wiki-nw-link {
+  color: #232325 !important;
+}
+
+/* Dropdown Menü mit Zeit, Land, etc */
+.dropdown.dd_clean .dd-toggle-label {
+  transition: all 0.5s ease;
+}
+
+.dropdown.dd_clean .dd-toggle-label:hover {
+  background-color: #34373f;
+  padding-left: 5px;
+}
+
+/* Dialogfeld mit Land, Zeit, etc weg, außer Schnellantwortbutton */
+._0_filters-panel {
+  background-color: #1e2028;
+  border-radius: 12px;
+  padding-left: 15px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,.25);
+} 
+
+/* Schild-Pupup */
+.d-info-section {
+  background-color: #1e2028;
+}
+
+.d-info-body {
   background-color: #17191e;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  padding: 4px;
+}
+
+.d-info-section-desc.col {
+  background-color: transparent;
+}
+
+/* Benachrichtigungsfeld */
+._0_copied_tooltip {
+  background-color: #1e2028;
+  border: 1px solid var(--button-color);
+}
+
+/* weitere Frage zu Webseite stellen Dialog */
+.question_form_box .q_form_wrapper {
+  background-color: transparent;
+}
+
+/* Hervorhebung von Seitenzusammenfassung */
+._0_result_page_summary {
+  background-color: #17191e;
+  padding: 8px;
+  border-radius: 5px;
+  border: .5px dashed var(--button-color);
+  line-height: 1.5rem;
+}
+
+/* Abmelden Button bei Seitenleiste */
+.quick-settings-footer {
+  border-top: 1px solid var(--button-color);
+  border-radius: 8px;
+}
+
+/* Quelle für Bilder */
+.image-preview-wrapper #PreviewImageUrl {
+  max-width: fit-content;
+  background-color: #17191e;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-hover);
+  margin-top: 5px;
+}
+
+/* kleines Rechteck bei Bilder -> Hochgeladen Pupup */
+.ranked-c-adjust-info-icon:not(.new-tooltip) .k-tooltip:after, .tooltip-trigger:not(.new-tooltip) .k-tooltip:after {
+  border-top: 8px solid var(--secondary);
+}
+
+/* URL-Leiste bei Nachrichten */
+.newsResultItem .newsResultHeader .sourceAndTime {
+  background-color: #17191e;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.instant-answer {
+  padding-bottom: 10px;
+  padding-left: 14px;
+  background-color: #1e2028;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: rgba(244, 182, 68, 0.4) 5px 5px, rgba(244, 182, 68, 0.3) 10px 10px, rgba(244, 182, 68, 0.2) 15px 15px, rgba(244, 182, 68, 0.1) 20px 20px;
+}
+
+/* small pdf icon */
+.ext_icon {
+  border: 1px solid var(--button-color);
+}
+
+/* Kommentar unter search result */
+.result-comments .comment {
+  background-color: var(--button-color);
+  color: #1b1b1b;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.result-comments .comment:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Episodes bei Podcasts */
+.top_podcast_item {
+  width: 130px;
+  background-color: #1e2028;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+/* Unterstreichen entfernen */
+.top_podcast_item:hover {
+    text-decoration: none;
 }
 
 /* Abstand unter URL */
 .__sri-url-box {
   margin-bottom: 5px;
   background-color: #17191e;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding-bottom: 4px;
-  padding-left: 8px;
+  border-radius: 5px;
+  padding: 8px;
 }
 
 /* Videos Hintergrund */
@@ -45,6 +182,13 @@
   color: var(--primary-700); /* old: #1b1b1b */
   border-radius: 5px;
   padding: 0 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate:hover {
+  background-color: rgba(150, 190, 250, 0.8);
+  color: #1b1b1b;
 }
 
 /* Video-Aufrufezahlen */
@@ -53,6 +197,13 @@
   color: var(--primary-700); /* old: #1b1b1b */
   border-radius: 5px;
   padding: 0 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate, .videoResultItem .videoResultRight .videoResultInfo .videoViewsCount:hover {
+  background-color: rgba(150, 190, 250, 0.8);
+  color: #1b1b1b;
 }
 
 /* News Results einheitliches UI Design */
@@ -79,6 +230,13 @@
   color: var(--primary-700); /* old: #1b1b1b */
   border-radius: 5px;
   padding: 0 6px;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.newsResultItem .newsResultTime:hover {
+  background-color: rgba(150, 190, 250, 0.8);
+  color: #1b1b1b;
 }
 
 /* Einheitliches Design bei der Auflistung der Podcasts */
@@ -93,11 +251,6 @@
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out forwards;
-}
-
-/* Riesen Lücke über den Inhalten entfernt */
-.top_podcasts_box {
-    margin-bottom: -4rem;
 }
 
 /* Schatten hinter Previewbild */
@@ -190,23 +343,11 @@
   border: 2px solid rgba(35, 35, 37, 0.7);
 }
 
-.search_area {
-	margin-top: 4px !important;
-	padding-top: 4px !important;
-	padding-bottom: 4px !important;
-}
-
 /* Positionierung des Unterergebnisses */
 .sri-group .sr-group {
   padding-left: 30px !important;
   padding-bottom: 10px;
 }
-
-/* black box at top
-.app-header.app-content-box {
-  background-color: #1a1c23;
-  box-shadow: 0 7px 10px #1a1c23;
-} */
 
 .correctedQuery {
   line-height: 2;
@@ -217,13 +358,18 @@
   background-color: #28282a;
 }
 
-/* Angleichung der Hintergrundfarbe bei Bilder und Videos */
+/* Anpassung Line-Height der Wikipedia-Beschreibung */
+.wiki_desc_text {
+  line-height: 1.55;
+}
+
+/* Hintergrundfarbe der gesamten Oberfläche */
 .app-box {
   background-color: #17191e;
 }
 
 .app-box-center {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 /* Mehr erfahren Button in Widget */
@@ -266,11 +412,6 @@
   color: #b3b7bb;
 }
 
-/* Wikipedia Link am Ende des Textabschnitts im Widget */
-.wiki-nw-link {
-  color: #97bffb !important;
-}
-
 /* Zeitstempel-Kästchen unter dem Titel */
 .__sri-time {
   background-color: var(--time-stamp);
@@ -285,18 +426,13 @@
   user-select: none;
 }
 
-/* Entfernt Doggo-Icon
-.doggo_sit_a {
-  display: none;
-}
-*/
-
 /* Container für Resultate */
 .sri-group,
 .search-result,
 .scene {
   background-color: #1e2028;
   border-radius: 5px;
+  
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out forwards;
@@ -393,22 +529,22 @@ html,
 
 /* Remove bottom border from links - kopiert von Wiki */
 .__sri_title_link._0_sri_title_link._0_URL {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 /* Remove underline with nested links - kopiert von Wiki */
 .__srgi-title a {
-border-bottom: none; var(--result-item-title-border);
+  border-bottom: none !important;
 }
 
 /* Remove underline with News module - kopiert von Wiki */
 .newsResultItem .newsResultHeader .newsResultTitle a._0_TITLE {
-  border-bottom: none; var(--result-item-title-border);
+  border-bottom: none !important;
 }
 
 /* Remove underline from links in Wikipedia module - kopiert von Wiki */
 .wikipediaResult a {
-  border-bottom: none; var(--result-item-title-border);
+  border-bottom: none !important;
 }
 
 /* Linse Background ist auch grau */
@@ -418,7 +554,7 @@ border-bottom: none; var(--result-item-title-border);
 
 /* Schnellantwort Background einheitlich */
 ._0_results_summary_box {
-  border-bottom: 1px solid var(--primary-200);
+  border-bottom: none !important;
   margin-bottom: 30px;
   background-color: #1e2028;
   border-radius: 22px;
@@ -430,16 +566,12 @@ border-bottom: none; var(--result-item-title-border);
   background: linear-gradient(transparent,#1e2028);
 }
 
-/* Dialogfeld mit Land, Zeit, etc weg, außer Schnellantwortbutton */
-._0_filters-panel {
-  display: none;
-}
-
 /* Schnellantwort Button */
 ._0_summarize_link {
   background-color: var(--button-color);
   max-width: max-content;
   margin-bottom: 10px;
+  margin-top: 3px;
   border-radius: 10px !important;
   padding: 5px 10px 5px 10px;
 }
@@ -532,14 +664,6 @@ border-bottom: none; var(--result-item-title-border);
   user-select: none;
 }
 
-/* kleines Experiment mit Hinweis am Ende von KI-generiertem Inhalt
-._0_results_summary_links:after {
-    margin-top: 5px;
-    font-size: .75rem;
-    content: "KI-generierte Antwort. Verifizieren Sie die Fakten.";
-}
-*/
-
 /* WolframAlpha Widget */
 .widget .wasb {
   background-color: #1e2028;
@@ -614,7 +738,6 @@ border-bottom: none; var(--result-item-title-border);
 /* Linear Gradient vor dem Mehr anzeigen Kästchen */
 .results_summary_text_box:has(#qa_show_more:not(:checked)) .smw::before {
     background: linear-gradient(transparent, #1e2028);
-  /* width: 100%; Fehlerhaft, da er die Maße vom Button nimmt und nicht vom darüberliegenden Container */
 }
 
 /* Infobox (i) bei Schnellantwort im ausgeklappten Zustand*/
