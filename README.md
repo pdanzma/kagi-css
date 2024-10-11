@@ -53,7 +53,7 @@ kagi-css is a custom CSS file to beautify and liven up the Kagi search engine in
 3. Paste the code into the inputfield at: [Link](https://kagi.com/settings?p=custom_css)
 4. Save and enjoy your enhanced Kagi experience!
 
-optional: It is planned that the “URL positioning” setting will be set to “Top title” under the “Display” item.
+optional: It is planned that the "URL Placement” setting will be set to “Above Title” under the “Appearance” item.
 
 ![URL Positioning](images/url-positioning.png)
 
