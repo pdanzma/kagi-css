@@ -28,16 +28,21 @@ kagi-css is a custom CSS file to beautify and liven up the Kagi search engine in
 - **Uniform Design**: The design now extends to almost all pages, be it results, images, videos, news or podcasts.
   
 ```
-:root {
-  --button-color: #F4B644;  /* Primärfarbe für die Buttons */
-  --button-hover-color: #E6AB40; /* Sekundärfarbe für die Buttons - beim Hovern - sollte leicht dunkler als die Button Farbe sein */
-  --source-highlight-color: #D9A23C; /* Farbe der Quellen und der kleinen Annotationen bei den Verweisen in der Schnellantwort */
-  --sri-hover-color: #F4B644; /* Farbe für das Hovern bei Suchergebnissen */
-  --color-search-input: #1e2028; /* Farbe für Search Box */
-  --color-search-input-border: var(--graphite-900);
-  --time-stamp: rgba(69, 69, 73, 0.8); /* Farbe für Zeitstempel mit Alpha-Wert, alt:  rgba(150, 190, 250, 0.8)*/
-  --m_sri_gap_color: #222222 !important;
-  --app-text: #fdfdfd !important;
+:root{
+  --button-color:#F4B644;
+  --button-hover-color:#E6AB40;
+  --source-highlight-color:#D9A23C;
+  --sri-hover-color:#F4B644;
+  --color-search-input:#1e2028;
+  --color-search-input-border:var(--graphite-900);
+  --time-stamp:rgba(69,69,73,0.8);
+  --m_sri_gap_color:#222222!important;
+  --app-text:#fdfdfd!important;
+  --app-bg:#17191e;
+  --inline-widget-bg:#1e2028;
+  --primary-25:#1e2028;
+  --primary-50:#1e2028;
+  --primary-70:#17191e
 }
 ```
 
@@ -47,6 +52,8 @@ kagi-css is a custom CSS file to beautify and liven up the Kagi search engine in
 2. Enable custom CSS in Kagi Settings.
 3. Paste the code into the inputfield at: [Link](https://kagi.com/settings?p=custom_css)
 4. Save and enjoy your enhanced Kagi experience!
+
+optional: It is planned that the “URL positioning” setting will be set to “Top title” under the “Display” item.
 
 ## Animations
 
@@ -58,6 +65,6 @@ kagi-css includes several animations to make your search experience more dynamic
 
 ## Any ideas / comments?
 
-If you have an idea that would extend / complete the look of Kagi or if you have found a bug, please write to me on Discord or write in Discord: kagi-discussions -> “UI Design Ideas for my custom css”.
+If you have an idea that would extend / complete the look of Kagi or if you have found a bug, please write to me on Discord or write in Discord: kagi-discussions -> “UI Design Ideas for my custom css”. [Link](https://discord.com/channels/1256077108111868035/1265596713083732060)
 
 # Enjoy your enhanced Kagi search experience!
