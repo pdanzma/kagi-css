@@ -1,829 +1,150 @@
-:root {
-  --button-color: #F4B644;  /* Primärfarbe für die Buttons */
-  --button-hover-color: #E6AB40; /* Sekundärfarbe für die Buttons - beim Hovern - sollte leicht dunkler als die Button Farbe sein */
-  --source-highlight-color: #D9A23C; /* Farbe der Quellen und der kleinen Annotationen bei den Verweisen in der Schnellantwort */
-  --sri-hover-color: #F4B644; /* Farbe für das Hovern bei Suchergebnissen */
-  --color-search-input: #1e2028; /* Farbe für Search Box */
-  --color-search-input-border: var(--graphite-900);
-  --time-stamp: rgba(69, 69, 73, 0.8); /* Farbe für Zeitstempel mit Alpha-Wert, alt:  rgba(150, 190, 250, 0.8)*/
-  --m_sri_gap_color: #222222 !important;
-  --app-text: #fdfdfd !important;
-}
-
-:focus-visible {
-  outline: 1px solid #ffb319;
-}
-
-/* Background bei Advanced Settings */
-.advanced-search-modal-backdrop::before {
-  background-color: #121213;
-}
-
-/* Wiki-Link */
-a.wiki-nw-link {
-  background-color: var(--button-color);
-  border-radius: 7px;
-  margin-top: 10px;
-  padding: 5px;
-  transition: all 0.5s ease;
-}
-
-a.wiki-nw-link:hover {
-  background-color: var(--button-hover-color);
-}
-
-/* Text des Buttons */
-.wiki-nw-link {
-  color: #232325 !important;
-}
-
-/* Dropdown Menü mit Zeit, Land, etc */
-.dropdown.dd_clean .dd-toggle-label {
-  transition: all 0.5s ease;
-}
-
-.dropdown.dd_clean .dd-toggle-label:hover {
-  background-color: #34373f;
-  padding-left: 5px;
-}
-
-/* Dialogfeld mit Land, Zeit, etc weg, außer Schnellantwortbutton */
-._0_filters-panel {
-  background-color: #1e2028;
-  border-radius: 12px;
-  padding-left: 15px;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,.25);
-} 
-
-/* Schild-Pupup */
-.d-info-section {
-  background-color: #1e2028;
-}
-
-.d-info-body {
-  background-color: #17191e;
-}
-
-.d-info-section-desc.col {
-  background-color: transparent;
-}
-
-/* Benachrichtigungsfeld */
-._0_copied_tooltip {
-  background-color: #1e2028;
-  border: 1px solid var(--button-color);
-}
-
-/* weitere Frage zu Webseite stellen Dialog */
-.question_form_box .q_form_wrapper {
-  background-color: transparent;
-}
-
-/* Hervorhebung von Seitenzusammenfassung */
-._0_result_page_summary {
-  background-color: #17191e;
-  padding: 8px;
-  border-radius: 5px;
-  border: .5px dashed var(--button-color);
-  line-height: 1.5rem;
-}
-
-/* Abmelden Button bei Seitenleiste */
-.quick-settings-footer {
-  border-top: 1px solid var(--button-color);
-  border-radius: 8px;
-}
-
-/* Quelle für Bilder */
-.image-preview-wrapper #PreviewImageUrl {
-  max-width: fit-content;
-  background-color: #17191e;
-  padding: 5px;
-  border-radius: 8px;
-  border: 1px solid var(--primary-hover);
-  margin-top: 5px;
-}
-
-/* kleines Rechteck bei Bilder -> Hochgeladen Pupup */
-.ranked-c-adjust-info-icon:not(.new-tooltip) .k-tooltip:after, .tooltip-trigger:not(.new-tooltip) .k-tooltip:after {
-  border-top: 8px solid var(--secondary);
-}
-
-/* URL-Leiste bei Nachrichten */
-.newsResultItem .newsResultHeader .sourceAndTime {
-  background-color: #17191e;
-  border-radius: 5px;
-  padding: 8px;
-}
-
-.instant-answer {
-  padding-bottom: 10px;
-  padding-left: 14px;
-  background-color: #1e2028;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: rgba(244, 182, 68, 0.4) 5px 5px, rgba(244, 182, 68, 0.3) 10px 10px, rgba(244, 182, 68, 0.2) 15px 15px, rgba(244, 182, 68, 0.1) 20px 20px;
-}
-
-/* small pdf icon */
-.ext_icon {
-  border: 1px solid var(--button-color);
-}
-
-/* Kommentar unter search result */
-.result-comments .comment {
-  background-color: var(--button-color);
-  color: #1b1b1b;
-  border-radius: 10px;
-  padding: 5px;
-  margin: 0 auto;
-}
-
-.result-comments .comment:hover {
-  background-color: var(--button-hover-color);
-}
-
-/* Episodes bei Podcasts */
-.top_podcast_item {
-  width: 130px;
-  background-color: #1e2028;
-  padding: 10px;
-  border-radius: 12px;
-}
-
-/* Unterstreichen entfernen */
-.top_podcast_item:hover {
-    text-decoration: none;
-}
-
-/* Abstand unter URL */
-.__sri-url-box {
-  margin-bottom: 5px;
-  background-color: #17191e;
-  border-radius: 5px;
-  padding: 8px;
-}
-
-/* Videos Hintergrund */
-.videoResultItem {
-  background-color: #1e2028;
-}
-
-/* Vorschläge bei der Suchleiste */
-.auto_suggestions .auto_item {
-  transition: all 0.5s ease;
-}
-
-/* Video-Zeitstempel */
-.videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate {
-  background-color: var(--time-stamp);
-  color: var(--primary-700); /* old: #1b1b1b */
-  border-radius: 5px;
-  padding: 0 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  user-select: none;
-}
-
-.videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate:hover {
-  background-color: rgba(150, 190, 250, 0.8);
-  color: #1b1b1b;
-}
-
-/* Video-Aufrufezahlen */
-.videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate, .videoResultItem .videoResultRight .videoResultInfo .videoViewsCount {
-  background-color: var(--time-stamp);
-  color: var(--primary-700); /* old: #1b1b1b */
-  border-radius: 5px;
-  padding: 0 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  user-select: none;
-}
-
-.videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate, .videoResultItem .videoResultRight .videoResultInfo .videoViewsCount:hover {
-  background-color: rgba(150, 190, 250, 0.8);
-  color: #1b1b1b;
-}
-
-/* News Results einheitliches UI Design */
-.newsResultItem {
-  background-color: #1e2028;
-  border-radius: 12px;
-
-  padding-top: 1.2rem;
-  padding-right: 22px;
-  padding-bottom: 0.7rem;
-  padding-left: 18px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.newsResultItem:first-child {
-  padding-top: 1.2rem;
-}
-
-/* Zeitstempel bei News */
-.newsResultItem .newsResultTime {
-  background-color: var(--time-stamp);
-  color: var(--primary-700); /* old: #1b1b1b */
-  border-radius: 5px;
-  padding: 0 6px;
-  user-select: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.newsResultItem .newsResultTime:hover {
-  background-color: rgba(150, 190, 250, 0.8);
-  color: #1b1b1b;
-}
-
-/* Einheitliches Design bei der Auflistung der Podcasts */
-.podcast_result {
-  background-color: #1e2028;
-  border-radius: 12px;
-
-  padding-top: 1.2rem;
-  padding-right: 22px;
-  padding-bottom: 0.7rem;
-  padding-left: 18px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-/* Schatten hinter Previewbild */
-.podcast_result .body .thumbnail img {
-  transition: box-shadow 0.5s ease;
-}
-
-.podcast_result .body .thumbnail img:hover {
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Margin über result entfernt */
-.podcast_result .body {
-    margin-top: 0;
-}
-
-/* Animation beim hovern */
-.podcast_result .title a {
-  transition: all 0.5s ease;
-}
-
-/* Podcasts: kleine Buttons bei Infos zum Podcast */
-.podcast_result .episode_meta>div+div,
-.podcast_result .body .content .podcast_publisher,
-.podcast_result .podcast_duration {
-  background-color: var(--time-stamp);
-  color: var(--primary-700); /* old: #1b1b1b */
-  border-radius: 5px;
-  padding: 0 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  user-select: none;
-}
-
-/* Hover-Effekt */
-.podcast_result .episode_meta>div+div:hover,
-.podcast_result .body .content .podcast_publisher:hover,
-.podcast_result .podcast_duration:hover {
-  background-color: rgba(150, 190, 250, 0.8);
-  color: #1b1b1b;
-}
-
-/* Erstes Element */
-.podcast_result .body .content .podcast_publisher i {
-  color: var(--primary-700); /* old: #1b1b1b */
-  transition: color 0.3s ease;
-}
-
-/* Hover-Effekt für das Icon */
-.podcast_result .body .content .podcast_publisher:hover i {
-  color: #1b1b1b;
-}
-
-/* Zeitstempel bei Videos */
-.widget-time-ago {
-  background-color: rgba(150, 190, 250, 0.8);
-  color: #1b1b1b;
-  user-select: none;
-  border-radius: 5px;
-  display: inline-block;
-  padding: 0 6px;
-  margin-bottom: auto;
-  margin-top: auto;
-}
-
-/* sticky header */
-.app-header.app-content-box {
-  position: sticky;
-  top: 0;
-  z-index: 114;
-
-  /* From https://css.glass */
-  background: rgba(26, 28, 35, 0.2);
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  /*box-shadow: 0 7px 10px #1a1c23;*/
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .7);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(35, 35, 37, 0.3);
-}
-
-/* Quick Settings Panel */
-.quick-settings {
-  background: rgba(32, 33, 36, 0.6);
-  border-bottom-left-radius: 16px;
-  border-top-left-radius: 16px;
-  box-shadow: 0 7px 10px #1a1c23;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 2px solid rgba(35, 35, 37, 0.7);
-}
-
-/* Positionierung des Unterergebnisses */
-.sri-group .sr-group {
-  padding-left: 30px !important;
-  padding-bottom: 10px;
-}
-
-.correctedQuery {
-  line-height: 2;
-}
-
-/* Wikipedia-Artikel Widget Hintergrund */
-.wikipedia_results {
-  background-color: #28282a;
-}
-
-/* Anpassung Line-Height der Wikipedia-Beschreibung */
-.wiki_desc_text {
-  line-height: 1.55;
-}
-
-/* Hintergrundfarbe der gesamten Oberfläche */
-.app-box {
-  background-color: #17191e;
-}
-
-.app-box-center {
-  margin-top: 1rem;
-}
-
-/* Mehr erfahren Button in Widget */
-.read-more-inline {
-  background-color: var(--button-color);
-  color: #1b1b1b;
-  border-radius: 10px;
-  padding: 2px 8px 2px 8px;
-}
-
-.read-more-inline:hover {
-  background-color: var(--button-hover-color);
-  color: #1b1b1b;
-}
-
-.read-more-inline svg {
-  color: #1b1b1b;
-  transition: all 0.6s ease;
-}
-
-.read-more-inline:hover svg {
-  color: #1b1b1b;
-  transform: translateX(5px);
-}
-
-/* Animation des Pfeils */
-.autoSugArrow svg {
-  transition: all 0.6s ease;
-}
-
-.autoSugArrow:hover svg {
-  transform: translateX(5px);
-}
-
-.auto_suggestions_lenses_edit_box:hover {
-  background-color: var(--sri-hover-color);
-}
-
-._0_results_summary_text {
-  color: #b3b7bb;
-}
-
-/* Zeitstempel-Kästchen unter dem Titel */
-.__sri-time {
-  background-color: var(--time-stamp);
-  color: var(--primary-700); /* old: #1b1b1b */
-  user-select: none;
-}
-
-.__sri-time.--new {
-  /* old: background-color: rgb(150, 190, 250, 0.8); */
-  background-color: var(--time-stamp);
-  color: var(--primary-700); /* old: #1b1b1b */
-  user-select: none;
-}
-
-/* Container für Resultate */
-.sri-group,
-.search-result,
-.scene {
-  background-color: #1e2028;
-  border-radius: 5px;
-  
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.__sri-title, .__sri_title_link {
-  /*color: var(--sri-hover-color);*/
-  transition: all .5s ease;
-}
-
-/* Anfangsanimation des gesamten Bildschirmes */
-.scene {
-  padding: 1rem;
-  opacity: 0; 
-  transform: translateY(20px); 
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-body,
-html,
-.mob {
-  background-color: #17191e;
-  font-family: var(--font-lufga), system-ui; /* change main font here */
-}
-
-/* Resultate der Suche */
-.search-result {
-  padding-top: 1.2rem;
-  padding-right: 22px;
-  padding-bottom: 0.7rem;
-  padding-left: 18px;
-  opacity: 0; 
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-/* Keyframe-Animation */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Auf einen Blick Kästchen */
-.widgetContent {
-    background-color: #1e2028;
-    border-radius: 12px;
-    padding-top: 1.2rem;
-    padding-right: 22px;
-    padding-bottom: 0.7rem;
-    padding-left: 18px;
-    opacity: 0; 
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.serp-nav .nav_item {
-  position: relative;
-}
-
-/* Animierte Linie unter Web, Bilder, Videos, etc */
-.serp-nav .nav_item:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: var(--nav_n_se_line);
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.serp-nav .nav_item:hover:after {
-  transform: scaleY(1);
-}
-
-/* Linie wird angezeigt, wo man sich gerade befindet (bsp. Web) */
-._0_sri-w-highlight .serp-nav .nav_item.searchResultAnswer:after, .serp-nav ._0_sri-w-highlight .nav_item.searchResultAnswer:after, .serp-nav .nav_item.--active:after, .serp-nav .nav_item:hover:after {
-    transform: scaleY(1);
-}
-
-/* Mehr anzeigen bei Settings */
-._0_more_search_box {
-  text-align: center;
-  width: 80%;
-}
-
-
-/* Remove bottom border from links - kopiert von Wiki */
-.__sri_title_link._0_sri_title_link._0_URL {
-  border-bottom: none !important;
-}
-
-/* Remove underline with nested links - kopiert von Wiki */
-.__srgi-title a {
-  border-bottom: none !important;
-}
-
-/* Remove underline with News module - kopiert von Wiki */
-.newsResultItem .newsResultHeader .newsResultTitle a._0_TITLE {
-  border-bottom: none !important;
-}
-
-/* Remove underline from links in Wikipedia module - kopiert von Wiki */
-.wikipediaResult a {
-  border-bottom: none !important;
-}
-
-/* Linse Background ist auch grau */
-.k_ui_dropdown_data_list {
-  background-color: #232325;
-}
-
-/* Schnellantwort Background einheitlich */
-._0_results_summary_box {
-  border-bottom: none !important;
-  margin-bottom: 30px;
-  background-color: #1e2028;
-  border-radius: 22px;
-  padding: 20px;
-}
-
-/* Angleichung des Gradienten */
-.results_summary_text_box:has(#qa_show_more:not(:checked)) .smw::before {
-  background: linear-gradient(transparent,#1e2028);
-}
-
-/* Schnellantwort Button */
-._0_summarize_link {
-  background-color: var(--button-color);
-  max-width: max-content;
-  margin-bottom: 10px;
-  margin-top: 3px;
-  border-radius: 10px !important;
-  padding: 5px 10px 5px 10px;
-}
-
-._0_summarize_link:hover {
-  background-color: var(--button-hover-color);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  transition: all .5s ease;
-}
-
-._0_summarize_link svg {
-  transition: all 0.6s ease !important;
-}
-
-._0_summarize_link:hover .ic svg {
-  transform: translateX(5px) !important;
-}
-
-._0_summarize_link {
-  color: #232325 !important;
-}
-
-._0_summarize_link a {
-  color: #232325 !important;
-}
-
-.top-content .top-content ._0_provider-content {
-  display: none !important;
-}
-
-/* Weiter in Assistent */
-._0_results_summary_link_to_IA {
-  background-color: var(--button-color);
-  max-width: max-content;
-  padding-right: 10px;
-  border-radius: 10px;
-  margin-top: 15px;
-}
-
-._0_results_summary_link_to_IA:hover {
-  background-color: var(--button-hover-color);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  transition: all .5s ease;
-}  
-
-/* kleine Annotationen bei Schnellantwort Quellen */
-.results_summary_text_box sup a {
-  border-radius: 50%;
-  background-color: #2D2F2F;
-  color: #8D9191;
-  padding: 1px 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.results_summary_text_box sup a:hover {
-  background-color: var(--source-highlight-color);
-  color: #F2FCFC;
-  transition: all .5s ease;
-}
-
-/* Vergrößerter Abstand zwischen Quellen und Button */
-._0_results_summary_links {
-    margin-bottom: 30px;
-}
-
-/* farblich hervorgehobene Quelle */
-._0_results_summary_links a {
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  border-radius: 3px;
-  display: inline-block;
-  text-decoration: none;
-}
-
-/* beim hovern des Circles im Text */
-._0_results_summary_links a.__0_highlight {
-  transform: translateX(3px);
-  background-color: var(--source-highlight-color);
-  color: var(--resultsummary-highlight_text);
-}
-
-/* beim hovern über die Quelle mit der Maus */
-._0_results_summary_links a:hover {
-  transform: translateX(3px);
-  background-color: var(--source-highlight-color);
-  color: var(--resultsummary-highlight_text);
-}
-
-/* kleiner Kasten mit Main URL der Quelle */
-._0_results_summary_links .__domain-name {
-  user-select: none;
-}
-
-/* WolframAlpha Widget */
-.widget .wasb {
-  background-color: #1e2028;
-}
-
-/* Titel des Widgets von WolframAlpha */
-.wasb-title {
-  text-decoration: none;
-  font-size: 1.25rem;
-  font-weight: 450;
-}
-
-/* Normales WolframAlpha Widget (= xxx) */
-.wolfram-answer {
-  background-color: #1e2028;
-  margin-bottom: 25px;
-  border-radius: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-/* "Frage zur Webseite stellen" Button bei Summarizer */
-._0_discuss_document_btn {
-  background-color: var(--button-color);
-  color: #1b1b1b;
-  border-radius: 10px;
-  padding: 2px 8px 2px 8px;
-  max-width: max-content;
-  position: relative;
-  margin-top: 1rem;
-}
-
-._0_discuss_document_btn:hover {
-  background-color: var(--button-hover-color);
-  color: #1b1b1b;
-}
-
-._0_discuss_document_btn svg {
-  transition: all 0.6s ease;
-}
-
-._0_discuss_document_btn:hover svg {
-  transform: translateX(5px);
-}
-
-/* Mehr anzeigen Button bei Schnellantwort */
-.smw {
-  background-color: var(--button-color);
-  color: #1b1b1b;
-  border-radius: 10px;
-  padding: 2px 8px 2px 8px;
-  max-width: max-content;
-  position: relative;
-  margin-top: 10px;
-  margin: 0 auto;
-  user-select: none;
-}
-
-.smw:hover {
-  background-color: var(--button-hover-color);
-  color: #1b1b1b;
-}
-
-.smw svg {
-  transition: all 0.6s ease;
-}
-
-.smw:hover svg {
-  transform: translateX(3px);
-}
-
-/* Linear Gradient vor dem Mehr anzeigen Kästchen */
-.results_summary_text_box:has(#qa_show_more:not(:checked)) .smw::before {
-    background: linear-gradient(transparent, #1e2028);
-}
-
-/* Infobox (i) bei Schnellantwort im ausgeklappten Zustand*/
-.ks-tooltip-body {
-  background-color: var(--k-tooltip-text);;
-  color: #FDFDFD;
-}
-
-/* Textfarbe des Bodys */
-.ia-tooltip-body__desc {
-    color: #fdfdfd;
-}
-
-/* "Findest du diese Antwort nützlich" */
-.ia-tooltip-body__desc__title {
-    color: #fdfdfd;
-}
-
-/* Infobox (i) bei Schnellantwort im eingeklappten Zustand (button-state) */
-.tooltip_base {
-  color: var(--k-tooltip-bg);
-  background-color: var(--k-tooltip-text);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  width: 500px;
-  z-index: 115;
-}
-
-/* kleines Quadrat als Hinführung */
-[data-arrow] {
-  background-color: var(--k-tooltip-text);
-}
-
-/* Related Search Buttons farblich korrigiert */
-.related-items a {
-  background-color: #1e2028;
-  transition: all .5s ease;
-}
-
-/* Weitere Ergebnisse anzeigen */
-.footer-search-results #load_more_results {
-  transition: all .5s ease;
-}
-
-/* sanfter Übergang beim Hovern */
-.btn.--primary {
-  transition: background-color 0.5s ease;
-}
-
-/* Infoseite bei Datenschutz-Check */
-.ranked-c-adjust-info-icon:not(.new-tooltip) .k-tooltip, .tooltip-trigger:not(.new-tooltip) .k-tooltip {
-  background-color: var(--k-tooltip-text);
-  color: #FDFDFD;
-}
-
-/* Widgets wie YouTube */
-.widgetContent .widgetItems .widgetItem {
-  background-color: #17191e;
-  transition: all .5s ease;
-}
-
-/* Preview des Videos  bei YT Widget */
-.widgetItem .videoResultThumbnail img {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-/* search bar shadow */
-.search-form .search-input-container, .search-form .search-input-container-kids {
-  box-shadow: 1px 8px 30px 0 rgba(0, 0, 0, 0.3);
-}
-
-/* Infobox des Paywallsicons */
-.paywall-icon .paywall-tooltip {
-  color: var(--k-tooltip-bg);
-  background-color: var(--k-tooltip-text);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Buttons bei Bildern */
-.btn.--secondary-light-s:hover {
-  border:1px solid var(--primary-hover);
-  color:var(--primary-hover);
-  transition: all .5s ease;
-}
-
-/* Widget-Header */
-.inlineHeader {
-  transition: all .5s ease;
-}
+:root{--button-color:#F4B644;--button-hover-color:#E6AB40;--source-highlight-color:#D9A23C;--sri-hover-color:#F4B644;--color-search-input:#1e2028;--color-search-input-border:var(--graphite-900);--time-stamp:rgba(69,69,73,0.8);--m_sri_gap_color:#222222!important;--app-text:#fdfdfd!important;--app-bg:#17191e;--inline-widget-bg:#1e2028;--primary-25:#1e2028;--primary-50:#1e2028;--primary-70:#17191e}
+:focus-visible{outline:1px solid #ffb319}
+.widget-simple .widgetItem {transition: all 0.5s ease;border-radius: 8px}
+.widget-simple .widgetItem:hover {background-color: var(--primary);padding: 5px}
+.widget-simple .widgetItemTitle .__title-text:hover {text-decoration:none}
+.widget-simple .widgetItemTitle .__title-text:hover {color:var(--secondary);text-decoration:none}
+.widget-simple .widgetItemTitle .__title-text {color:var(--primary);transition: all 0.5s ease;}
+.widgetContent .widgetItems .widgetItem:hover {background-color:#1c1e24}
+#quickPeekResults .inlineHeader,#quickPeekResults details {border-bottom:.5px dashed var(--inline-header-border);}
+.k_ui_dropdown_data_list{background-color:var(--primary-50);left:65px !important;top:0px !important;border: 1px solid var(--as-dd-border);border-radius: 12px;box-shadow: 1px 8px 30px 0 rgba(0,0,0,.09);gap: 6px;padding-block: 20px;padding-inline: 10px;}
+.k_ui_dropdown_data_list .list_items>._0_k_ui_dropdown_li, .k_ui_dropdown_data_list .list_items>a, .k_ui_dropdown_data_list .list_items>div {align-items:center;background-color:transparent;border-radius:9px;transition:background-color .1s ease-in-out,color .1s ease-in-out}
+.k_ui_dropdown_data_list .list_items>._0_k_ui_dropdown_li.__hover,.k_ui_dropdown_data_list .list_items>._0_k_ui_dropdown_li:focus-visible,
+.k_ui_dropdown_data_list .list_items>._0_k_ui_dropdown_li:hover,.k_ui_dropdown_data_list .list_items>a.__hover,.k_ui_dropdown_data_list .list_items>a:focus-visible,.k_ui_dropdown_data_list .list_items>a:hover,.k_ui_dropdown_data_list .list_items>div.__hover,.k_ui_dropdown_data_list .list_items>div:focus-visible,.k_ui_dropdown_data_list .list_items>div:hover {background-color:var(--primary);color:var(--secondary);}
+.d-info-box-title-header {background:#a5d46a;}
+.d-info-box-title-header.--trackers {background:#ffdf80}
+.d-info-box-title-header.--trackers-danger {background:#ffa080}
+.k_ui_btn_group{border:none;background-color:var(--app-bg);}
+.advanced-search-modal-backdrop::before{background-color:#121213}
+a.wiki-nw-link{background-color:var(--inline-domain-tag-bg);border-radius:8px;margin-top:10px;padding:5px;transition:all .5s ease;}
+a.wiki-nw-link:hover{background-color:var(--button-hover-color);color:#1b1b1b}
+.wiki-nw-link{color:var(--primary-700)!important;}
+.wiki-nw-link:hover{color:#1b1b1b}
+.dropdown.dd_clean .dd-toggle-label{transition:all .5s ease}
+.dropdown.dd_clean .dd-toggle-label:hover{background-color:#34373f;padding-left:5px}
+._0_filters-panel{background-color:#1e2028;border-radius:12px;padding-left:15px;margin-right:10px;margin-bottom:5px;box-shadow:0 0 10px rgba(0,0,0,.25)}
+.d-info-section,.question_form_box .q_form_wrapper{background-color:#1e2028}
+.d-info-body{background-color:#17191e}
+.d-info-section-desc.col{background-color:transparent}
+._0_result_page_summary{background-color:#17191e;padding:8px;border-radius:5px;border:.5px dashed var(--button-color);line-height:1.5rem}
+.quick-settings-footer{border-top:1px solid var(--button-color);border-radius:8px}
+.image-preview-wrapper #PreviewImageUrl{max-width:fit-content;background-color:#17191e;padding:5px;border-radius:8px;border:1px solid var(--primary-hover);margin-top:5px}
+.ranked-c-adjust-info-icon:not(.new-tooltip) .k-tooltip:after,.tooltip-trigger:not(.new-tooltip) .k-tooltip:after{border-top:8px solid var(--secondary)}
+.newsResultItem .newsResultHeader .sourceAndTime{background-color:#17191e;border-radius:5px;padding:8px}
+.instant-answer{padding-bottom:10px;padding-left:14px;background-color:#1e2028;border-radius:12px;margin-bottom:30px;box-shadow:rgba(244,182,68,0.4) 5px 5px,rgba(244,182,68,0.3) 10px 10px,rgba(244,182,68,0.2) 15px 15px,rgba(244,182,68,0.1) 20px 20px}
+.ext_icon{border:1px solid var(--button-color)}
+.result-comments .comment{background-color:var(--button-color);color:#1b1b1b;border-radius:10px;padding:5px;margin:0 auto}
+.result-comments .comment:hover{background-color:var(--button-hover-color)}
+.top_podcast_item{width:130px;background-color:#1e2028;padding:10px;border-radius:12px}
+.top_podcast_item:hover{text-decoration:none}
+.__sri-url-box{margin-bottom:5px;background-color:#17191e;border-radius:5px;padding:8px}
+.videoResultItem{background-color:#1e2028}
+.auto_suggestions .auto_item{transition:all .5s ease}
+.auto_suggestions .auto_item.highlighted {background-color:var(--primary-70)}
+.videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;transition:background-color .3s ease,color .3s ease;user-select:none}
+.videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate:hover{background-color:rgba(150,190,250,0.8);color:#1b1b1b}
+.videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate,.videoResultItem .videoResultRight .videoResultInfo .videoViewsCount{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;transition:background-color .3s ease,color .3s ease;user-select:none}
+.videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate:hover,.videoResultItem .videoResultRight .videoResultInfo .videoViewsCount:hover{background-color:rgba(150,190,250,0.8);color:#1b1b1b}
+.newsResultItem{background-color:#1e2028;border-radius:12px;padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease-out forwards}
+.newsResultItem:first-child{padding-top:1.2rem}
+.newsResultItem .newsResultTime{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;user-select:none;transition:background-color .3s ease,color .3s ease}
+.newsResultItem .newsResultTime:hover{background-color:rgba(150,190,250,0.8);color:#1b1b1b}
+.podcast_result{background-color:#1e2028;border-radius:12px;padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease-out forwards}
+.podcast_result .body .thumbnail img{transition:box-shadow .5s ease}
+.podcast_result .body .thumbnail img:hover{box-shadow:0 8px 15px rgba(0,0,0,0.2)}
+.podcast_result .body{margin-top:0}
+.podcast_result .title a{transition:all .5s ease}
+.podcast_result .episode_meta>div+div,.podcast_result .body .content .podcast_publisher,.podcast_result .podcast_duration{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;transition:background-color .3s ease,color .3s ease;user-select:none}
+.podcast_result .episode_meta>div+div:hover,.podcast_result .body .content .podcast_publisher:hover,.podcast_result .podcast_duration:hover{background-color:rgba(150,190,250,0.8);color:#1b1b1b}
+.podcast_result .body .content .podcast_publisher i{color:var(--primary-700);transition:color .3s ease}
+.podcast_result .body .content .podcast_publisher:hover i{color:#1b1b1b}
+.widget-time-ago{background-color:rgba(150,190,250,0.8);color:#1b1b1b;user-select:none;border-radius:5px;display:inline-block;padding:0 6px;margin-bottom:auto;margin-top:auto}
+.app-header.app-content-box{position:sticky;top:0;z-index:114;background:rgba(26,28,35,0.2);border-bottom-left-radius:16px;border-bottom-right-radius:16px;box-shadow:0 2px 15px rgba(0,0,0,.7);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);border:1px solid rgba(35,35,37,0.3)}
+.quick-settings{background:rgba(32,33,36,0.6);border-bottom-left-radius:16px;border-top-left-radius:16px;box-shadow:0 7px 10px #1a1c23;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);border:2px solid rgba(35,35,37,0.7)}
+.sri-group .sr-group{padding-left:30px!important;padding-bottom:10px}
+.correctedQuery{line-height:2}
+.wikipedia_results{background-color:#28282a}
+.wiki_desc_text{line-height:1.55}
+.app-box{background-color:#17191e}
+.app-box-center{margin-top:1rem}
+.read-more-inline{background-color:var(--button-color);color:#1b1b1b;border-radius:10px;padding:2px 8px}
+.read-more-inline:hover{background-color:var(--button-hover-color);color:#1b1b1b}
+.read-more-inline svg{color:#1b1b1b;transition:all .6s ease}
+.read-more-inline:hover svg{color:#1b1b1b;transform:translateX(5px)}
+._0_results_summary_text{color:#b3b7bb}
+.__sri-time{background-color:var(--time-stamp);color:var(--primary-700);user-select:none}
+.__sri-time.--new{background-color:var(--time-stamp);color:var(--primary-700);user-select:none}
+.sri-group,.search-result,.scene{background-color:#1e2028;border-radius:5px;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease-out forwards}
+.__sri-title,.__sri_title_link{transition:all .5s ease}
+.scene{padding:1rem;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease-out forwards}
+body,html,.mob{background-color:#17191e;font-family:var(--font-lufga),system-ui}
+.search-result{padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease-out forwards}
+@keyframes fadeInUp{to{opacity:1;transform:translateY(0)}}
+.widgetContent{background-color:#1e2028;border-radius:12px;padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease-out forwards}
+.serp-nav .nav_item{position:relative}
+.serp-nav .nav_item:after{content:"";display:block;position:absolute;bottom:0;left:0;width:100%;height:3px;background-color:var(--nav_n_se_line);transform:scaleY(0);transform-origin:bottom;transition:transform .3s ease,box-shadow .3s ease;border-top-left-radius:5px;border-top-right-radius:5px}
+.serp-nav .nav_item:hover:after{transform:scaleY(1)}
+._0_sri-w-highlight .serp-nav .nav_item.searchResultAnswer:after,.serp-nav ._0_sri-w-highlight .nav_item.searchResultAnswer:after,.serp-nav .nav_item.--active:after,.serp-nav .nav_item:hover:after{transform:scaleY(1)}
+._0_more_search_box{text-align:center;width:80%}
+.__sri_title_link._0_sri_title_link._0_URL{border-bottom:none!important}
+.__srgi-title a{border-bottom:none!important}
+.newsResultItem .newsResultHeader .newsResultTitle a._0_TITLE{border-bottom:none!important}
+.wikipediaResult a{border-bottom:none!important;color:var(--button-color)}
+._0_results_summary_box{border-bottom:none!important;margin-bottom:30px;background-color:#1e2028;border-radius:22px;padding:20px}
+.results_summary_text_box:has(#qa_show_more:not(:checked)) .smw::before{background:linear-gradient(transparent,#1e2028)}
+._0_summarize_link{background-color:var(--button-color);max-width:max-content;margin-bottom:10px;margin-top:3px;border-radius:10px!important;padding:5px 10px}
+._0_summarize_link:hover{background-color:var(--button-hover-color);box-shadow:0 8px 15px rgba(0,0,0,0.2);transition:all .5s ease}
+._0_summarize_link svg{transition:all .6s ease!important}
+._0_summarize_link:hover .ic svg{transform:translateX(5px)!important}
+._0_summarize_link,._0_summarize_link a{color:#232325!important}
+.top-content .top-content ._0_provider-content{display:none!important}
+._0_results_summary_link_to_IA{background-color:var(--inline-domain-tag-bg);max-width:max-content;padding:5px;border-radius:10px;margin-top:15px;transition:all .5s ease;user-select:none;}
+._0_results_summary_link_to_IA:hover{background-color:var(--button-hover-color);box-shadow:0 8px 15px rgba(0,0,0,0.2)}
+.results_summary_text_box sup a{border-radius:50%;background-color:#2D2F2F;color:#8D9191;padding:1px 4px;transition:background-color .3s ease,color .3s ease}
+.results_summary_text_box sup a:hover{background-color:var(--source-highlight-color);color:#F2FCFC;transition:all .5s ease}
+._0_results_summary_links{margin-bottom:30px}
+._0_results_summary_links a{transition:color .3s ease-in-out,transform .3s ease-in-out;border-radius:3px;display:inline-block;text-decoration:none}
+._0_results_summary_links a.__0_highlight,._0_results_summary_links a:hover{transform:translateX(3px);background-color:var(--source-highlight-color);color:var(--resultsummary-highlight_text)}
+._0_results_summary_links .__domain-name{user-select:none}
+.widget .wasb{background-color:#1e2028}
+.wasb-title{text-decoration:none;font-size:1.25rem;font-weight:450}
+.wolfram-answer{background-color:#1e2028;margin-bottom:25px;border-radius:10px;padding-right:10px;padding-left:10px}
+._0_discuss_document_btn{background-color:var(--button-color);color:#1b1b1b;border-radius:10px;padding:2px 8px;max-width:max-content;position:relative;margin-top:1rem}
+._0_discuss_document_btn:hover{background-color:var(--button-hover-color);color:#1b1b1b}
+._0_discuss_document_btn svg{transition:all .6s ease}
+._0_discuss_document_btn:hover svg{transform:translateX(5px)}
+.smw{background-color:var(--button-color);color:#1b1b1b;border-radius:10px;padding:2px 8px;max-width:max-content;position:relative;margin:10px auto 0;user-select:none}
+.smw:hover{background-color:var(--button-hover-color);color:#1b1b1b}
+.smw svg{transition:all .6s ease}
+.smw:hover svg{transform:translateX(3px)}
+.results_summary_text_box:has(#qa_show_more:not(:checked)) .smw::before{background:linear-gradient(transparent,#1e2028)}
+.ks-tooltip-body{background-color:var(--k-tooltip-text);color:#FDFDFD}
+.ia-tooltip-body__desc,.ia-tooltip-body__desc__title{color:#fdfdfd}
+.tooltip_base{color:var(--k-tooltip-bg);background-color:var(--k-tooltip-text);box-shadow:0 8px 15px rgba(0,0,0,0.2);width:500px;z-index:115}
+[data-arrow]{background-color:var(--k-tooltip-text)}
+.related-items a{background-color:#1e2028;transition:all .5s ease}
+.footer-search-results #load_more_results,.btn.--primary{transition:all .5s ease}
+.ranked-c-adjust-info-icon:not(.new-tooltip) .k-tooltip,.tooltip-trigger:not(.new-tooltip) .k-tooltip{background-color:var(--k-tooltip-text);color:#FDFDFD}
+.widgetContent .widgetItems .widgetItem{background-color:#17191e;transition:all .5s ease}
+.widgetItem .videoResultThumbnail img{border-top-left-radius:5px;border-bottom-left-radius:5px}
+.search-form .search-input-container,.search-form .search-input-container-kids{box-shadow:1px 8px 30px 0 rgba(0,0,0,0.3)}
+.paywall-icon .paywall-tooltip{color:var(--k-tooltip-bg);background-color:var(--k-tooltip-text);box-shadow:0 8px 15px rgba(0,0,0,0.2)}
+.btn.--secondary-light-s:hover{border:1px solid var(--primary-hover);color:var(--primary-hover);transition:all .5s ease}
+.inlineHeader{transition:all .5s ease}
+.ranked-c-adjust-info-icon:not(.new-tooltip) .k-tooltip:after, .tooltip-trigger:not(.new-tooltip) .k-tooltip:after {border-top: 8px solid var(--secondary);}
+.auto_suggestions_lenses_edit_box:hover {background-color: var(--sri-hover-color);}
+.top_podcast_item {width: 130px;background-color: #1e2028;padding: 10px;border-radius: 12px;}
+.widget-time-ago {background-color: rgba(150, 190, 250, 0.8);color: #1b1b1b;user-select: none;border-radius: 5px;display: inline-block;padding: 0 6px;margin-bottom: auto;margin-top: auto;}
+.podcast_result {background-color: #1e2028;border-radius: 12px;padding-top: 1.2rem;padding-right: 22px;padding-bottom: 0.7rem;padding-left: 18px;opacity: 0;transform: translateY(20px);animation: fadeInUp 0.6s ease-out forwards;}
+.scene {padding: 1rem;opacity: 0; transform: translateY(20px); animation: fadeInUp 0.6s ease-out forwards;}
+@keyframes fadeInUp {to{opacity: 1;transform: translateY(0);}}
+._0_queryInfo{display: none;}
+._0_results_summary_link_to_IA a {color:var(--primary-700);}
+._0_results_summary_link_to_IA a:hover {color:#1b1b1b;text-decoration:none!important;}
+.top_nav_links>a{background-color: var(--button-color);padding-left: 20px;border-radius: 20px;color: #232325 !important;box-shadow: 0 0 10px rgba(0,0,0,.5);transition: all 0.5s ease;padding-right: 20px;height: 40px;}
+.top_nav_links>a:hover{background-color:var(--button-hover-color);}
+#settings_showFiltersPanel:checked~.top-panel #top-parent {margin-left:3px;}
+.cheatsh .content{background-color: var(--primary-25);border-radius: 5px;}
+.cheatsh .cheatsh_content_wrpr::after {background-color: var(--primary-50);}
+.cheatsh .code {box-shadow: 0 0 10px rgba(0,0,0,.25)}
+.ranked-box-overlay.--open {left:656px !important;}
