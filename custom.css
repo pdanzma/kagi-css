@@ -37,7 +37,7 @@ a.wiki-nw-link:hover{background-color:var(--button-hover-color);color:#1b1b1b}
 .result-comments .comment:hover{background-color:var(--button-hover-color)}
 .top_podcast_item{width:130px;background-color:#1e2028;padding:10px;border-radius:12px}
 .top_podcast_item:hover{text-decoration:none}
-.__sri-url-box{margin-bottom:5px;background-color:#17191e;border-radius:5px;padding:8px}
+.__sri-url-box{margin-bottom: 10px;background-color:#17191e;border-radius:5px;padding:8px}
 .videoResultItem{background-color:#1e2028}
 .auto_suggestions .auto_item{transition:all .5s ease}
 .auto_suggestions .auto_item.highlighted {background-color:var(--primary-70)}
@@ -61,7 +61,7 @@ a.wiki-nw-link:hover{background-color:var(--button-hover-color);color:#1b1b1b}
 .widget-time-ago{background-color:rgba(150,190,250,0.8);color:#1b1b1b;user-select:none;border-radius:5px;display:inline-block;padding:0 6px;margin-bottom:auto;margin-top:auto}
 .app-header.app-content-box{position:sticky;top:0;z-index:114;background:rgba(26,28,35,0.2);border-bottom-left-radius:16px;border-bottom-right-radius:16px;box-shadow:0 2px 15px rgba(0,0,0,.7);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);border:1px solid rgba(35,35,37,0.3)}
 .quick-settings{background:rgba(32,33,36,0.6);border-bottom-left-radius:16px;border-top-left-radius:16px;box-shadow:0 7px 10px #1a1c23;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);border:2px solid rgba(35,35,37,0.7)}
-.sri-group .sr-group{padding-left:30px!important;padding-bottom:10px}
+.sri-group .sr-group {padding: 10px 10px 20px 30px!important;margin-top:0px}
 .correctedQuery{line-height:2}
 .wikipedia_results{background-color:#28282a}
 .wiki_desc_text{line-height:1.55}
@@ -75,10 +75,11 @@ a.wiki-nw-link:hover{background-color:var(--button-hover-color);color:#1b1b1b}
 .__sri-time{background-color:var(--time-stamp);color:var(--primary-700);user-select:none}
 .__sri-time.--new{background-color:var(--time-stamp);color:var(--primary-700);user-select:none}
 .sri-group,.search-result,.scene{background-color:#1e2028;border-radius:5px;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease-out forwards}
+._0_TITLE{padding-left: 1.5rem}
 .__sri-title,.__sri_title_link{transition:all .5s ease}
 .scene{padding:1rem;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease-out forwards}
 body,html,.mob{background-color:#17191e;font-family:var(--font-lufga),system-ui}
-.search-result{padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease-out forwards}
+.search-result{padding:1.2rem .8rem .6rem .8rem;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease-out forwards}
 @keyframes fadeInUp{to{opacity:1;transform:translateY(0)}}
 .widgetContent{background-color:#1e2028;border-radius:12px;padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease-out forwards}
 .serp-nav .nav_item{position:relative}
