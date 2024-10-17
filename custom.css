@@ -75,7 +75,6 @@ a.wiki-nw-link:hover{background-color:var(--button-hover-color);color:#1b1b1b}
 .__sri-time{background-color:var(--time-stamp);color:var(--primary-700);user-select:none}
 .__sri-time.--new{background-color:var(--time-stamp);color:var(--primary-700);user-select:none}
 .sri-group,.search-result,.scene{background-color:#1e2028;border-radius:5px;opacity:0;transform:translateY(20px);animation:fadeInUp .3s ease-out forwards}
-._0_TITLE{padding-left: 1.5rem}
 .__sri-title,.__sri_title_link{transition:all .5s ease}
 .scene{padding:1rem;opacity:0;transform:translateY(20px);animation:fadeInUp .3s ease-out forwards}
 body,html,.mob{background-color:#17191e;font-family:var(--font-lufga),system-ui}
