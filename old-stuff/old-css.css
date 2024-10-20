@@ -14,6 +14,77 @@
   outline: 1px solid #ffb319;
 }
 
+/* Folgend: The Assistant Items */
+.my-7 {
+  margin-bottom:5px;
+  margin-top:5px;
+}
+
+#uploadedItems .item,[data-files] .item {
+  background-color:var(--primary-50);
+  outline:0.5px solid var(--primary-100);
+}
+
+#uploadedItems .item:focus-visible,#uploadedItems .item:hover:not(:has([data-selector=close]:hover)),[data-files] .item:focus-visible,[data-files] .item:hover:not(:has([data-selector=close]:hover)) { 
+  outline:.5px solid var(--kagi-highlight)
+}
+
+/* Damit der Assistant auch eine ChatBubble hat */
+.chat_bubble {
+  background-color: #1e2028; 
+  border-radius: 5px; 
+  padding: 1rem; 
+  margin-bottom: 1.3rem;
+  box-shadow:0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Highlight des Modells */
+#chat_box .chat_bubble .model {
+  color:var(--secondary);
+  background-color: var(--primary);
+  max-width: fit-content;
+  height: 24px;
+  border-radius: 5px;
+  padding: 0 8px;
+  user-select: none;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Translator Widget */
+.widget#translate {
+  background-color: var(--primary-50);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.widget#translate .tbox .icons .fc {
+  color:var(--primary);
+  background-color: var(--primary-70);
+  padding: 5px;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+}
+
+.widget#translate .tbox .icons .fc:hover {
+  background-color: var(--button-hover-color);
+  color: var(--secondary);
+}
+
+/* DropDown Menü Angleichung (wie in Assistant) */
+.dropdown .dd-list li {
+  border-radius: 9px;
+}
+
+.dropdown .dd-list li.--hover,.dropdown .dd-list li:hover {
+  background-color:var(--primary);
+  color:var(--secondary);
+}
+
+.dropdown .dd-list input[type=search] {
+  background-color:var(--primary-50);
+  border:1px solid var(--secondary);
+}
+
 /* Background bei Advanced Settings */
 .advanced-search-modal-backdrop::before {
   background-color: #121213;
