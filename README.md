@@ -89,4 +89,8 @@ kagi-css includes several animations to make your search experience more dynamic
 
 If you have an idea that would extend / complete the look of Kagi or if you have found a bug, please write to me on Discord or write in Discord: kagi-discussions -> “UI Design Ideas for my custom css”. [Link](https://discord.com/channels/1256077108111868035/1265596713083732060)
 
+## Derivates
+
+This project can of course be forked by anyone and changed/extended at will. The only thing that matters is to give me credit and this project as credits and to mark the fork as such. I try to list all possible forks here, currently there is a darker version of my theme, which can be viewed [here](https://github.com/realrogue/kagi-darker).
+
 # Enjoy your enhanced Kagi search experience!
