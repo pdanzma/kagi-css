@@ -14,10 +14,11 @@
 .scene .cardHistory ._0_cardHistoryBack svg {margin-bottom: 25px;background: var(--button-color);border-radius: 100%;color: var(--primary-50);}
 .widget-simple .widgetItem {transition: all 0.5s ease;border-radius: 8px}
 .widget-simple .widgetItem:hover {background-color: var(--primary);padding: 5px}
-.widget-simple .widgetItemTitle .__title-text:hover {text-decoration:none}
-.widget-simple .widgetItemTitle .__title-text:hover {color:var(--secondary);text-decoration:none}
+.widget-simple .widgetItemTitle:hover .__title-text {text-decoration:none}
+.widget-simple .widgetItemTitle:hover .__title-text {color:var(--secondary);text-decoration:none}
 .widget-simple .widgetItemTitle .__title-text {color:var(--primary);transition: all 0.5s ease;}
 .widgetContent .widgetItems .widgetItem:hover {background-color:#1c1e24}
+.widget-simple:hover .__result-date { color: #1c1e24; }
 #quickPeekResults .inlineHeader,#quickPeekResults details {border-bottom:.5px dashed var(--inline-header-border);}
 .k_ui_dropdown_data_list{background-color:var(--primary-50);left:65px !important;top:0px !important;border: 1px solid var(--as-dd-border);border-radius: 12px;box-shadow: 1px 8px 30px 0 rgba(0,0,0,.09);gap: 6px;padding-block: 20px;padding-inline: 10px;}
 .k_ui_dropdown_data_list .list_items>._0_k_ui_dropdown_li, .k_ui_dropdown_data_list .list_items>a, .k_ui_dropdown_data_list .list_items>div {align-items:center;background-color:transparent;border-radius:9px;transition:background-color .1s ease-in-out,color .1s ease-in-out}
@@ -52,7 +53,9 @@ a.wiki-nw-link:hover{background-color:var(--button-hover-color);color:#1b1b1b}
 .__sri-url-box{margin-bottom: 10px;background-color:#17191e;border-radius:5px;padding:8px}
 .videoResultItem{background-color:#1e2028}
 .auto_suggestions .auto_item{transition:all .5s ease}
-.auto_suggestions .auto_item.highlighted {background-color:var(--primary-70)}
+.auto_suggestions .auto_item.highlighted { background-color: var(--btn-primary-bg);color: var(--btn-primary-color);}
+.auto_suggestions .auto_item.highlighted .preview-image.icEmpty svg { color: var(--btn-primary-color); }
+.auto_suggestions .auto_item.highlighted .autoSugArrow svg { color: var(--btn-primary-color); }
 .videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;transition:background-color .3s ease,color .3s ease;user-select:none}
 .videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate:hover{background-color:rgba(150,190,250,0.8);color:#1b1b1b}
 .videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate,.videoResultItem .videoResultRight .videoResultInfo .videoViewsCount{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;transition:background-color .3s ease,color .3s ease;user-select:none}
@@ -160,3 +163,8 @@ body,html,.mob{background-color:#17191e;font-family:var(--font-lufga),system-ui}
 .cheatsh .cheatsh_content_wrpr::after {background-color: var(--primary-50);}
 .cheatsh .code {box-shadow: 0 0 10px rgba(0,0,0,.25)}
 .ranked-box-overlay.--open {left:656px !important;}
+.k_ui_dropdown_data_list {left: -300px !important;}
+.dark\:bg-graphite-900:where(.dark,.dark *) {background-color: #17191e;}
+.gap-2 {gap: calc(var(--spacing) * 4);}
+.bg-graphite {background-color: var(--color-graphite);}
+.advanced-search-modal{ margin-top: 6rem; }
