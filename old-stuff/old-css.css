@@ -1,3 +1,8 @@
+/**
+* ATTENTION:
+* This older file is only kept for reference. I've added detailed comments here that will hopefully help other users create their own CSS. This file should no longer be used as it's outdated.
+*/
+
 :root {
   --button-color: #F4B644;  /* Primärfarbe für die Buttons */
   --button-hover-color: #E6AB40; /* Sekundärfarbe für die Buttons - beim Hovern - sollte leicht dunkler als die Button Farbe sein */
