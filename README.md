@@ -46,25 +46,6 @@ kagi-css is a custom CSS file to beautify and liven up the Kagi search engine in
 - **Responsive Design**: Looks great on both desktop and mobile devices
 - **Easy color changes**: There is a field at the beginning where you can easily change the most important colors as you wish
 - **Uniform Design**: The design now extends to almost all pages, be it results, images, videos, news or podcasts.
-  
-```
-:root{
-  --button-color:#F4B644; /* Primary color for the buttons */
-  --button-hover-color:#E6AB40; /* Secondary color for the buttons - when hovering - should be slightly darker than the button color */
-  --source-highlight-color:#D9A23C; /* Color of the sources and the small annotations for the references in the quick reply */
-  --sri-hover-color:#F4B644; /* Color for hovering over search results */
-  --color-search-input:#1e2028; /* Color for Search Box */
-  --color-search-input-border:var(--graphite-900);
-  --time-stamp:rgba(69,69,73,0.8); /* Color for timestamp with alpha value */
-  --m_sri_gap_color:#222222!important;
-  --app-text:#fdfdfd!important;
-  --app-bg:#17191e;
-  --inline-widget-bg:#1e2028;
-  --primary-25:#1e2028; /* Adjustment for The Assistant */
-  --primary-50:#1e2028; /* Adjustment for The Assistant */
-  --primary-70:#17191e /* Adjustment for The Assistant */
-}
-```
 
 ## Installation
 
@@ -89,8 +70,8 @@ kagi-css includes several animations to make your search experience more dynamic
 
 If you have an idea that would extend / complete the look of Kagi or if you have found a bug, please write to me on Discord or write in Discord: kagi-discussions -> “UI Design Ideas for my custom css”. [Link](https://discord.com/channels/1256077108111868035/1265596713083732060)
 
-## Derivates
+## Concerns
 
-This project can of course be forked by anyone and changed/extended at will. The only thing that matters is to give me credit and this project as credits and to mark the fork as such. I try to list all possible forks here, currently there is a darker version of my theme, which can be viewed [here](https://github.com/realrogue/kagi-darker).
+Unfortunately, I keep hitting the character limit, which is why the custom.css file looks so compressed. Even with the latest update, I couldn't implement every idea due to this limitation. That's why I plan to structure the CSS modularly, so you can pick and choose the building blocks you need. There will still be an all-in-one solution, but it won't include all modifications. Please bear with me.
 
 # Enjoy your enhanced Kagi search experience!
