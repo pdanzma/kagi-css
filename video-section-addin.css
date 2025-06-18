@@ -1,0 +1,6 @@
+.videoResultItem{background-color:#1e2028}
+.videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;transition:background-color .3s ease,color .3s ease;user-select:none}
+.videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate:hover{background-color:rgba(150,190,250,0.8);color:#1b1b1b}
+.videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate,.videoResultItem .videoResultRight .videoResultInfo .videoViewsCount{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;transition:background-color .3s ease,color .3s ease;user-select:none}
+.videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate:hover,.videoResultItem .videoResultRight .videoResultInfo .videoViewsCount:hover{background-color:var(--primary);color:#1b1b1b}
+.videoResultItem .videoResultRight .videoResultInfo {padding: 10px;}
