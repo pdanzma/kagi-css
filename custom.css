@@ -43,7 +43,8 @@ a.wiki-nw-link:hover{background-color:var(--button-hover-color);color:#1b1b1b}
 .image_preview_arrows_box button { background-color:var(--primary);transition: all 0.5s ease;cursor: pointer;}
 .ranked-c-adjust-info-icon:not(.new-tooltip) .k-tooltip:after,.tooltip-trigger:not(.new-tooltip) .k-tooltip:after{border-top:8px solid var(--secondary)}
 .newsResultItem .newsResultHeader .sourceAndTime{background-color:#17191e;border-radius:5px;padding:8px}
-.instant-answer{padding-bottom:10px;padding-left:14px;background-color:#1e2028;border-radius:12px;margin-bottom:30px;box-shadow:rgba(244,182,68,0.4) 5px 5px,rgba(244,182,68,0.3) 10px 10px,rgba(244,182,68,0.2) 15px 15px,rgba(244,182,68,0.1) 20px 20px}
+._0_results_summary_box {position: relative;overflow: hidden;background-color: #1e2028;border-radius: 12px;margin-bottom: 30px;padding: 1.2rem;box-shadow: 0 8px 25px rgba(0,0,0,0.3);border: 1px solid transparent;transition: all 0.3s ease-in-out;z-index: 2;}
+._0_results_summary_box::before {content: '';position: absolute;top: -50%;left: -50%;width: 200%;height: 200%;background:radial-gradient(circle at 10% 20%, rgba(244, 182, 68, 0.3) 0%, transparent 50%),radial-gradient(circle at 70% 30%, rgba(30, 32, 40, 0.4) 0%, transparent 50%),radial-gradient(circle at 30% 80%, rgba(36, 37, 47, 0.4) 0%, transparent 50%),radial-gradient(circle at 90% 90%, rgba(26, 27, 34, 0.4) 0%, transparent 50%); background-size: 50% 50%; animation: moveBackground 20s infinite alternate ease-in-out;filter: blur(80px);opacity: 0.7;z-index: -1;}
 .ext_icon{border:1px solid var(--button-color)}
 .result-comments .comment{background-color:var(--button-color);color:#1b1b1b;border-radius:10px;padding:5px;margin:0 auto}
 .result-comments .comment:hover{background-color:var(--button-hover-color)}
@@ -54,25 +55,6 @@ a.wiki-nw-link:hover{background-color:var(--button-hover-color);color:#1b1b1b}
 .auto_suggestions .auto_item.highlighted { background-color: var(--btn-primary-bg);color: var(--btn-primary-color);}
 .auto_suggestions .auto_item.highlighted .preview-image.icEmpty svg { color: var(--btn-primary-color); }
 .auto_suggestions .auto_item.highlighted .autoSugArrow svg { color: var(--btn-primary-color); }
-.videoResultItem{background-color:#1e2028}
-.videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;transition:background-color .3s ease,color .3s ease;user-select:none}
-.videoResultItem .videoResultRight .videoResultInfo .videoPublished .videoPublishedDate:hover{background-color:rgba(150,190,250,0.8);color:#1b1b1b}
-.videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate,.videoResultItem .videoResultRight .videoResultInfo .videoViewsCount{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;transition:background-color .3s ease,color .3s ease;user-select:none}
-.videoResultItem .videoResultRight .videoResultInfo .videoPublishedDate:hover,.videoResultItem .videoResultRight .videoResultInfo .videoViewsCount:hover{background-color:var(--primary);color:#1b1b1b}
-.videoResultItem .videoResultRight .videoResultInfo {padding: 10px;}
-.newsResultItem{background-color:#1e2028;border-radius:12px;padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .3s ease-out forwards}
-.newsResultItem:first-child{padding-top:1.2rem}
-.newsResultItem .newsResultTime{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;user-select:none;transition:background-color .3s ease,color .3s ease}
-.newsResultItem .newsResultTime:hover{background-color:var(--primary);color:#1b1b1b}
-.podcast_result{background-color:#1e2028;border-radius:12px;padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .3s ease-out forwards}
-.podcast_result .body .thumbnail img{transition:box-shadow .5s ease}
-.podcast_result .body .thumbnail img:hover{box-shadow:0 8px 15px rgba(0,0,0,0.2)}
-.podcast_result .body{margin-top:0}
-.podcast_result .title a{transition:all .5s ease}
-.podcast_result .episode_meta>div+div,.podcast_result .body .content .podcast_publisher,.podcast_result .podcast_duration{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;transition:background-color .3s ease,color .3s ease;user-select:none}
-.podcast_result .episode_meta>div+div:hover,.podcast_result .body .content .podcast_publisher:hover,.podcast_result .podcast_duration:hover{background-color:var(--primary);color:#1b1b1b}
-.podcast_result .body .content .podcast_publisher i{color:var(--primary-700);transition:color .3s ease}
-.podcast_result .body .content .podcast_publisher:hover i{color:#1b1b1b}
 .widget-time-ago{background-color:rgba(150,190,250,0.8);color:#1b1b1b;user-select:none;border-radius:5px;display:inline-block;padding:0 6px;margin-bottom:auto;margin-top:auto}
 .app-header.app-content-box{position:sticky;top:0;z-index:114;background:rgba(26,28,35,0.2);border-bottom-left-radius:16px;border-bottom-right-radius:16px;box-shadow:0 2px 15px rgba(0,0,0,.7);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);border:1px solid rgba(35,35,37,0.3)}
 .quick-settings{background:rgba(32,33,36,0.6);border-bottom-left-radius:16px;border-top-left-radius:16px;box-shadow:0 7px 10px #1a1c23;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);border:2px solid rgba(35,35,37,0.7)}
@@ -94,7 +76,6 @@ a.wiki-nw-link:hover{background-color:var(--button-hover-color);color:#1b1b1b}
 .scene{padding:1rem;opacity:0;transform:translateY(20px);animation:fadeInUp .3s ease-out forwards}
 body,html,.mob{background-color:#17191e;font-family:var(--font-lufga),system-ui}
 .search-result{padding:1.2rem .8rem .6rem .8rem;opacity:0;transform:translateY(20px);animation:fadeInUp .3s ease-out forwards}
-@keyframes fadeInUp{to{opacity:1;transform:translateY(0)}}
 .widgetContent{background-color:#1e2028;border-radius:5px;padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .3s ease-out forwards}
 .serp-nav .nav_item{position:relative}
 .serp-nav .nav_item:after{content:"";display:block;position:absolute;bottom:0;left:0;width:100%;height:3px;background-color:var(--nav_n_se_line);transform:scaleY(0);transform-origin:bottom;transition:transform .3s ease,box-shadow .3s ease;border-top-left-radius:5px;border-top-right-radius:5px}
@@ -155,7 +136,6 @@ body,html,.mob{background-color:#17191e;font-family:var(--font-lufga),system-ui}
 .widget-time-ago {background-color: rgba(150, 190, 250, 0.8);color: #1b1b1b;user-select: none;border-radius: 5px;display: inline-block;padding: 0 6px;margin-bottom: auto;margin-top: auto;}
 .podcast_result {background-color: #1e2028;border-radius: 12px;padding-top: 1.2rem;padding-right: 22px;padding-bottom: 0.7rem;padding-left: 18px;opacity: 0;transform: translateY(20px);animation: fadeInUp 0.3s ease-out forwards;}
 .scene {padding: 1rem;opacity: 0; transform: translateY(20px); animation: fadeInUp 0.3s ease-out forwards;}
-@keyframes fadeInUp {to{opacity: 1;transform: translateY(0);}}
 ._0_queryInfo{display: none;}
 ._0_results_summary_link_to_IA a {color:var(--primary-700);}
 ._0_results_summary_link_to_IA a:hover {color:#1b1b1b;text-decoration:none!important;}
@@ -178,3 +158,12 @@ body,html,.mob{background-color:#17191e;font-family:var(--font-lufga),system-ui}
 .thread-more-menu button:hover {background-color: var(--primary);color: var(--secondary);}
 .thread-more-menu a {color: var(--primary);border-radius: 5px;padding: 5px 10px;transition: all 0.5s ease;}
 .thread-more-menu a:hover {background-color: var(--primary);color: var(--secondary);}
+.newsResultItem{background-color:#1e2028;border-radius:12px;padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .3s ease-out forwards}
+.newsResultItem:first-child{padding-top:1.2rem}
+.newsResultItem .newsResultTime:hover{background-color:var(--primary);color:#1b1b1b}
+.podcast_result{background-color:#1e2028;border-radius:12px;padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .3s ease-out forwards}
+.podcast_result .body .content .podcast_publisher:hover i{color:#1b1b1b}
+.videoResultItem{background-color:#1e2028}
+@keyframes fadeInUp{to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInUp {to{opacity: 1;transform: translateY(0);}}
+@keyframes moveBackground {0% {transform: translate(0, 0);}25% {transform: translate(5%, 10%);}50% {transform: translate(-5%, 15%);}75% {transform: translate(10%, 5%);}100% {transform: translate(0, 0);}}
