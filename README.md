@@ -72,26 +72,12 @@ kagi-css is a custom stylesheet that gives Kagi a refined glassmorphism look wit
 - Easy color customization via variables at the top of the file
 - Uniform styling for results, images, videos, news, and podcasts
 
-## File Options
-
-Choose one approach:
-
-- All-in-one: custom.css (includes the most important elements from all sections)
-- Add-ins (pick as needed; currently not all can be used together):
-  - video-section-addin.css – for the Video tab
-  - podcast-section-addin.css – for the Podcast tab
-  - news-section-addin.css – for the News tab
-
-Note: The main search page includes key content from the all-in-one solution.
-
 ## Installation
 
-1) Download custom.css (or the add-in you want) from this repository.
+1) Download custom.css from this repository.
 2) In Kagi, enable custom CSS: https://kagi.com/settings?p=custom_css
 3) Paste the entire CSS into the input field.
 4) Save and refresh Kagi.
-
-Important: Kagi has a character limit for custom CSS. If the full stylesheet does not fit, use the smaller add-ins or trim features you do not need.
 
 Recommended setting: Set URL placement to “Above Title” under Appearance for best visual alignment.
 
@@ -104,6 +90,8 @@ Recommended setting: Set URL placement to “Above Title” under Appearance for
 - Subtle tile and component motion for a lively feel
 
 ## What’s New
+
+Good news: The character limit for CSS in Kagi has been increased to 40,000, so the old workaround with add-ons is no longer necessary and the all-in-one solution can be used directly. Thank you, Kagi team! 
 
 The latest update improves the Quick Answer visuals for better emphasis and readability.
 
@@ -127,9 +115,13 @@ The latest update improves the Quick Answer visuals for better emphasis and read
 
 ## Tips & Notes
 
-- Character limit: If you hit Kagi’s limit, choose targeted add-ins or remove sections you don’t need.
 - Mobile: The theme is responsive, but visual density differs from desktop; adjust variables if desired.
 - Not affiliated with Kagi. This is a community theme.
+
+## Known Bugs
+
+- List of sources in Assistant not adapted to kagi-css design
+- z-indexes are below the Wikipedia article in the first search results
 
 ## Contributing
 
