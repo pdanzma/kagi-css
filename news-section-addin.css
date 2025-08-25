@@ -1,4 +1,0 @@
-.newsResultItem{background-color:#1e2028;border-radius:12px;padding:1.2rem 22px .7rem 18px;opacity:0;transform:translateY(20px);animation:fadeInUp .3s ease-out forwards}
-.newsResultItem:first-child{padding-top:1.2rem}
-.newsResultItem .newsResultTime{background-color:var(--time-stamp);color:var(--primary-700);border-radius:5px;padding:0 6px;user-select:none;transition:background-color .3s ease,color .3s ease}
-.newsResultItem .newsResultTime:hover{background-color:var(--primary);color:#1b1b1b}

@@ -1,41 +1,14 @@
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0)
-    }
-}
-
-@keyframes moveBackground {
-
-    0%,
-    to {
-        transform: translate(0, 0)
-    }
-
-    25% {
-        transform: translate(5%, 10%)
-    }
-
-    50% {
-        transform: translate(-5%, 15%)
-    }
-
-    75% {
-        transform: translate(10%, 5%)
-    }
-}
-
 :root {
     --purple-300: var(--primary);
-    --search-result-title-hover: #E6AB40;
-    --primary-visited: #F4B644;
-    --button-color: #F4B644;
-    --button-hover-color: #E6AB40;
-    --source-highlight-color: #D9A23C;
-    --sri-hover-color: #F4B644;
+    --search-result-title-hover: #9CA3AF;
+    --primary-visited: #8B89A3;
+    --button-color: #6B7280;
+    --button-hover-color: #9CA3AF;
+    --source-highlight-color: #A1A1AA;
+    --sri-hover-color: #8B89A3;
     --color-search-input: #1e2028;
     --color-search-input-border: var(--graphite-900);
-    --time-stamp: rgba(69, 69, 73, 0.8);
+    --time-stamp: rgba(49, 49, 53, 0.8);
     --m_sri_gap_color: #222222 !important;
     --app-text: #EAEAEA !important;
     --secondary-text: #A0A0B4;
@@ -47,7 +20,25 @@
     --primary-100: #17191e;
     --primary-hover: var(--primary);
     --primary-bg: #24252F;
-    --secondary-bg: #1E2028
+    --secondary-bg: #1E2028;
+
+    --gpu-acceleration: translate3d(0, 0, 0);
+}
+
+/* If Firefox has problems with the blur effect, comment out this code. <--- delete this line
+@-moz-document url-prefix() {
+  .backdrop-blur-elements {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(30, 32, 40, 0.95) !important;
+  }
+} delete this ---> */ 
+
+.mob,
+body,
+html {
+    background-color: #17191e;
+    font-family: 'Lufga', system-ui;
 }
 
 .my-7 {
@@ -77,6 +68,10 @@
     height: 24px;
     padding: 0 8px;
     user-select: none
+}
+
+.chat_bubble:focus-within:before,.chat_bubble:hover:before {
+    background-color: transparent;
 }
 
 .widget#translate {
@@ -110,8 +105,17 @@
 
 .dropdown .dd-list input[type=search],
 .k_ui_dropdown_data_list {
-    background-color: var(--primary-50);
-    border: 1px solid var(--secondary)
+    background: rgba(30, 32, 40, 0.12);
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background-clip: padding-box;
+    border: 1px solid var(--secondary);
+
+    transform: var(--gpu-acceleration);
+    -webkit-transform: var(--gpu-acceleration);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .k_ui_dropdown_data_list {
@@ -121,48 +125,58 @@
     box-shadow: 1px 8px 30px 0 rgba(0, 0, 0, .09);
     gap: 6px;
     padding-block: 20px;
-    padding-inline: 10px
+    padding-inline: 10px;
 }
 
 .scene .cardHistory ._0_cardHistoryBack svg {
     margin-bottom: 25px;
     background: var(--button-color);
     border-radius: 100%;
-    color: var(--primary-50)
+    color: var(--primary-50);
 }
 
 .widget-simple .widgetItem {
-    transition: all .5s ease;
-    border-radius: 8px
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        transform .2s ease;
+    border-radius: 8px;
 }
 
 .widget-simple .widgetItem:hover {
     background-color: var(--primary);
-    padding: 5px
+    transform: scale(1.02);
 }
 
 .widget-simple .widgetItemTitle:hover .__title-text {
     color: var(--secondary);
-    text-decoration: none
+    text-decoration: none;
 }
 
 .widget#translate .tbox .icons .fc,
 .widget-simple .widgetItemTitle .__title-text {
     color: var(--primary);
-    transition: all .5s ease
+    transition: 
+        background-color .3s ease,
+        color .3s ease;
 }
 
 .widgetContent .widgetItems .widgetItem:hover {
-    background-color: #1c1e24
+    background-color: #1c1e24;
 }
 
 .widget-simple:hover .__result-date {
-    color: #1c1e24
+    color: #1c1e24;
+}
+
+.widget-simple .__domain-name {
+    background-color: var(--time-stamp);
+    color: var(--primary-700);
 }
 
 #quickPeekResults .inlineHeader,
 #quickPeekResults details {
-    border-bottom: .5px dashed var(--inline-header-border)
+    border-bottom: .5px dashed var(--inline-header-border);
 }
 
 .k_ui_dropdown_data_list .list_items>._0_k_ui_dropdown_li,
@@ -171,7 +185,7 @@
     align-items: center;
     background-color: transparent;
     border-radius: 9px;
-    transition: background-color .1s ease-in-out, color .1s ease-in-out
+    transition: background-color .1s ease-in-out, color .1s ease-in-out;
 }
 
 .k_ui_dropdown_data_list .list_items>._0_k_ui_dropdown_li.__hover,
@@ -209,15 +223,16 @@
 }
 
 a.wiki-nw-link {
-    background-color: var(--inline-domain-tag-bg);
+    background-color: var(--primary-bg);
     border-radius: 8px;
     margin-top: 10px;
     padding: 5px
 }
 
 a.wiki-nw-link:hover {
-    background-color: var(--button-hover-color);
-    color: #1b1b1b
+    background-color: #2A2B36;
+    color: var(--app-text);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
 }
 
 .wiki-nw-link {
@@ -226,12 +241,14 @@ a.wiki-nw-link:hover {
 
 .podcast_result .body .content .podcast_publisher:hover i,
 .wiki-nw-link:hover {
-    color: #1b1b1b
+    color: var(--app-text)
 }
 
 .dropdown.dd_clean .dd-toggle-label,
 a.wiki-nw-link {
-    transition: all .5s ease
+    transition: 
+        background-color .3s ease,
+        padding-left .3s ease;
 }
 
 .dropdown.dd_clean .dd-toggle-label:hover {
@@ -239,22 +256,12 @@ a.wiki-nw-link {
     padding-left: 5px
 }
 
-._0_filters-panel {
-    border-radius: 12px;
-    padding-left: 15px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .25)
-}
-
-._0_filters-panel,
 .d-info-section,
 .question_form_box .q_form_wrapper {
     background-color: #1e2028
 }
 
-._0_result_page_summary,
-.d-info-body {
+._0_result_page_summary {
     background-color: #17191e
 }
 
@@ -319,7 +326,7 @@ a.wiki-nw-link {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at 10% 20%, rgba(244, 182, 68, .3)0, transparent 50%), radial-gradient(circle at 70% 30%, rgba(30, 32, 40, .4)0, transparent 50%), radial-gradient(circle at 30% 80%, rgba(36, 37, 47, .4)0, transparent 50%), radial-gradient(circle at 90% 90%, rgba(26, 27, 34, .4)0, transparent 50%);
+    background: radial-gradient(circle at 10% 20%, rgba(107, 114, 128, .3)0, transparent 50%), radial-gradient(circle at 70% 30%, rgba(30, 32, 40, .4)0, transparent 50%), radial-gradient(circle at 30% 80%, rgba(36, 37, 47, .4)0, transparent 50%), radial-gradient(circle at 90% 90%, rgba(26, 27, 34, .4)0, transparent 50%);
     background-size: 50% 50%;
     animation: moveBackground 20s infinite alternate ease-in-out;
     filter: blur(80px);
@@ -355,7 +362,9 @@ a.wiki-nw-link {
 }
 
 .auto_suggestions .auto_item {
-    transition: all .5s ease
+    transition:
+        background-color .3s ease,
+        color .3s ease;
 }
 
 .auto_suggestions .auto_item.highlighted {
@@ -370,9 +379,15 @@ a.wiki-nw-link {
 
 .app-header.app-content-box,
 .quick-settings {
+    min-height: 60px;
     border-bottom-left-radius: 16px;
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px)
+    -webkit-backdrop-filter: blur(5px);
+
+    transform: var(--gpu-acceleration);
+    -webkit-transform: var(--gpu-acceleration);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .app-header.app-content-box {
@@ -453,7 +468,7 @@ a.wiki-nw-link {
 .sri-group {
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp .3s ease-out forwards
+    animation: fadeInCLS .3s ease-out forwards
 }
 
 .scene,
@@ -466,21 +481,6 @@ a.wiki-nw-link {
 .__sri-title,
 .__sri_title_link {
     transition: all .5s ease
-}
-
-.mob,
-body,
-html {
-    background-color: #17191e;
-    font-family: var(--font-lufga), system-ui
-}
-
-.search-result,
-.widgetContent {
-    padding: 1.2rem .8rem .6rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp .3s ease-out forwards
 }
 
 .widgetContent {
@@ -549,21 +549,15 @@ html {
     padding: 20px
 }
 
-.results_summary_text_box:has(#qa_show_more:not(:checked)) .smw::before {
-    background: linear-gradient(transparent, #1e2028)
-}
-
 ._0_summarize_link {
     background-color: var(--button-color);
-    max-width: max-content;
+    min-width: 120px;
+    max-width: 200px;
     margin-bottom: 10px;
     margin-top: 3px;
     border-radius: 10px !important;
-    padding: 5px 10px
-}
-
-._0_summarize_link:hover {
-    transition: all .5s ease
+    padding: 5px 10px;
+    user-select: none
 }
 
 ._0_summarize_link svg {
@@ -579,17 +573,15 @@ html {
     color: #232325 !important
 }
 
-.top-content .top-content ._0_provider-content {
-    display: none !important
-}
-
 ._0_results_summary_link_to_IA {
     background-color: var(--inline-domain-tag-bg);
     max-width: max-content;
     padding: 5px;
     border-radius: 10px;
     margin-top: 15px;
-    transition: all .5s ease;
+    transition: 
+        background-color .3s ease,
+        box-shadow .3s ease;
     user-select: none
 }
 
@@ -604,13 +596,14 @@ html {
     background-color: #2d2f2f;
     color: #8d9191;
     padding: 1px 4px;
-    transition: background-color .3s ease, color .3s ease
+    transition: 
+        background-color .3s ease,
+        color .3s ease;
 }
 
 .results_summary_text_box sup a:hover {
-    background-color: var(--source-highlight-color);
-    color: #f2fcfc;
-    transition: all .5s ease
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
 ._0_results_summary_links {
@@ -627,12 +620,16 @@ html {
 ._0_results_summary_links a.__0_highlight,
 ._0_results_summary_links a:hover {
     transform: translateX(3px);
-    background-color: var(--source-highlight-color);
-    color: var(--resultsummary-highlight_text)
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: var(--primary);
+    color: var(--secondary)
 }
 
 ._0_results_summary_links .__domain-name {
-    user-select: none
+    user-select: none;
+    background-color: var(--time-stamp);
+    color: var(--primary-700)
 }
 
 .related-items a,
@@ -655,6 +652,7 @@ html {
 }
 
 ._0_discuss_document_btn {
+    min-height: 60px;
     background-color: var(--button-color);
     color: #1b1b1b;
     border-radius: 10px;
@@ -787,8 +785,8 @@ html {
 }
 
 .widget-time-ago {
-    background-color: rgba(150, 190, 250, .8);
-    color: #1b1b1b;
+    background-color: var(--time-stamp);
+    color: var(--primary-700);
     user-select: none;
     border-radius: 5px;
     display: inline-block;
@@ -806,20 +804,22 @@ html {
     padding: 1rem;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp .3s ease-out forwards
+    animation: fadeInCLS .3s ease-out forwards
 }
 
 ._0_queryInfo {
     display: none
 }
 
-._0_results_summary_link_to_IA a {
-    color: var(--primary-700)
+._0_results_summary_link_to_IA {
+    background-color: var(--primary-bg);
 }
-
-._0_results_summary_link_to_IA a:hover {
-    color: #1b1b1b;
-    text-decoration: none !important
+._0_results_summary_link_to_IA:hover {
+    background-color: #2A2B36;
+}
+._0_results_summary_link_to_IA a {
+    color: var(--primary-700);
+    text-decoration: none !important;
 }
 
 .top_nav_links>a {
@@ -839,6 +839,10 @@ html {
 
 #settings_showFiltersPanel:checked~.top-panel #top-parent {
     margin-left: 3px
+}
+
+#top-parent {
+    user-select: none
 }
 
 .cheatsh .content {
@@ -920,7 +924,7 @@ html {
     padding: 1.2rem 22px .7rem 18px;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp .3s ease-out forwards
+    animation: fadeInCLS .3s ease-out forwards
 }
 
 .newsResultItem:first-child {
@@ -969,7 +973,12 @@ html {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, .1);
-    border-radius: 16px 16px 0 0
+    border-radius: 16px 16px 0 0;
+
+    transform: var(--gpu-acceleration);
+    -webkit-transform: var(--gpu-acceleration);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .main-center-box>* {
@@ -1003,7 +1012,12 @@ html {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, .3);
-    padding: 5px 10px 10px
+    padding: 5px 10px 10px;
+
+    transform: var(--gpu-acceleration);
+    -webkit-transform: var(--gpu-acceleration);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .thread-list>li:is(.active, :hover, :focus-within) {
@@ -1041,7 +1055,7 @@ html {
     padding: 1.2rem 22px .7rem 18px;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp .3s ease-out forwards
+    animation: fadeInCLS .3s ease-out forwards
 }
 
 .newsResultItem:first-child {
@@ -1108,7 +1122,7 @@ html {
     padding: 1.2rem 22px .7rem 18px;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp .3s ease-out forwards
+    animation: fadeInCLS .3s ease-out forwards
 }
 
 .podcast_result .body .thumbnail img {
@@ -1154,29 +1168,164 @@ html {
     color: #1b1b1b
 }
 
-.promptOptionsSelector .custom-assistants li.option[aria-selected=true] .center, .promptOptionsSelector .default-assistants li.option[aria-selected=true] .center, .promptOptionsSelector .recommended-assistants li.option[aria-selected=true] .center {
+.promptOptionsSelector .custom-assistants li.option[aria-selected=true] .center,
+.promptOptionsSelector .default-assistants li.option[aria-selected=true] .center,
+.promptOptionsSelector .recommended-assistants li.option[aria-selected=true] .center {
     color: var(--secondary);
 }
 
 .dragover #form {
-    background: rgba(65,63,83,.35);
+    background-color: rgba(65, 63, 83, .35);
     border: 2px dashed var(--primary);
-    transition: all 0.5s ease
+    transition: 
+        background-color .3s ease,
+        border .3s ease;
 }
 
-#uploadedItems .item,[data-files] .item {
+#uploadedItems .item,
+[data-files] .item {
     background-color: var(--primary-100);
-}^
+}
 
 .upgrade-banner .info {
     line-height: 1.2rem;
 }
 
-.promptOptionsSelector .custom-assistants li.option,.promptOptionsSelector .default-assistants li.option,.promptOptionsSelector .recommended-assistants li.option {
-    transition: all .5s ease;
+.promptOptionsSelector .custom-assistants li.option,
+.promptOptionsSelector .default-assistants li.option,
+.promptOptionsSelector .recommended-assistants li.option {
+    transition: 
+        background-color .3s ease,
+        color .3s ease;
 }
 
-.promptOptionsSelector .custom-assistants li.option.info-show,.promptOptionsSelector .custom-assistants li.option:focus-within,.promptOptionsSelector .custom-assistants li.option:hover,.promptOptionsSelector .default-assistants li.option.info-show,.promptOptionsSelector .default-assistants li.option:focus-within,.promptOptionsSelector .default-assistants li.option:hover,.promptOptionsSelector .recommended-assistants li.option.info-show,.promptOptionsSelector .recommended-assistants li.option:focus-within,.promptOptionsSelector .recommended-assistants li.option:hover {
+.promptOptionsSelector .custom-assistants li.option.info-show,
+.promptOptionsSelector .custom-assistants li.option:focus-within,
+.promptOptionsSelector .custom-assistants li.option:hover,
+.promptOptionsSelector .default-assistants li.option.info-show,
+.promptOptionsSelector .default-assistants li.option:focus-within,
+.promptOptionsSelector .default-assistants li.option:hover,
+.promptOptionsSelector .recommended-assistants li.option.info-show,
+.promptOptionsSelector .recommended-assistants li.option:focus-within,
+.promptOptionsSelector .recommended-assistants li.option:hover {
     background-color: var(--primary-hover);
     color: var(--secondary)
+}
+
+@keyframes fadeInCLS {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes moveBackground {
+
+    0%,
+    100% {
+        transform: translate(0, 0)
+    }
+
+    50% {
+        transform: translate(2%, 5%)
+    }
+}
+
+.search-result,
+.widgetContent {
+    padding: 1.2rem .8rem .6rem;
+}
+
+.sri-group, .search-result {
+    min-height: 120px;
+    opacity: 0;
+    transform: translateY(0);
+    will-change: opacity, transform;
+    animation: fadeInCLS 0.3s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .sri-group {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+
+    .app-header,
+    .quick-settings,
+    #prompt-box {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(30, 32, 40, 0.95) !important;
+    }
+
+    @keyframes moveBackground {
+        to {
+            transform: translate(0, 0);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .enhanced-animation {
+        animation: complexMove 2s ease-in-out infinite;
+    }
+}
+
+.search-result:nth-child(1) { animation-delay: 0.1s; }
+.search-result:nth-child(2) { animation-delay: 0.2s; }
+.search-result:nth-child(3) { animation-delay: 0.3s; }
+
+.thread-list>li:hover>a>.title {
+    color: var(--secondary)
+}
+
+.thread-list>li>a>.title {
+    transition: color 0.5s ease
+}
+
+.thread-list>li:is(.active)>a>.title {
+    color: var(--secondary)
+}
+
+:not(dialog)>.thread-more-menu,
+dialog,
+.dropdown .dd-list, ._0_copied_tooltip, .chat_bubble .message-info {
+    background: rgba(30, 32, 40, 0.12);
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background-clip: padding-box;
+
+    transform: var(--gpu-acceleration);
+    -webkit-transform: var(--gpu-acceleration);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.k_ui_dropdown[aria-expanded=true] .k_ui_dropdown_data_list {
+    background: rgba(30, 32, 40);
+}
+
+.content>details:not(.references) {
+    background-color: var(--secondary);
+    border: 1px solid color-mix(in srgb,var(--secondary) 30%, transparent);
+}
+
+.results_summary_text_box:has(#qa_show_more:not(:checked)) .smw::before {
+    width: 0%
 }
