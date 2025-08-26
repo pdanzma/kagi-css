@@ -103,8 +103,7 @@ html {
     color: var(--secondary)
 }
 
-.dropdown .dd-list input[type=search],
-.k_ui_dropdown_data_list {
+.dropdown .dd-list input[type=search] {
     background: rgba(30, 32, 40, 0.12);
     backdrop-filter: blur(12px) saturate(120%);
     -webkit-backdrop-filter: blur(12px) saturate(120%);
@@ -377,8 +376,7 @@ a.wiki-nw-link {
     color: var(--btn-primary-color)
 }
 
-.app-header.app-content-box,
-.quick-settings {
+.app-header.app-content-box {
     min-height: 60px;
     border-bottom-left-radius: 16px;
     backdrop-filter: blur(5px);
@@ -401,10 +399,11 @@ a.wiki-nw-link {
 }
 
 .quick-settings {
-    background: rgba(32, 33, 36, .6);
+    background: rgba(32, 33, 36, .8);
     border-top-left-radius: 16px;
     box-shadow: 0 7px 10px #1a1c23;
-    border: 2px solid rgba(35, 35, 37, .7)
+    border: 2px solid rgba(35, 35, 37, .7);
+    border-bottom-left-radius: 16px;
 }
 
 .sri-group .sr-group {
@@ -662,13 +661,7 @@ a.wiki-nw-link {
     margin-top: 1rem
 }
 
-._0_discuss_document_btn:hover,
-.smw,
-.smw:hover {
-    background-color: var(--button-hover-color);
-    color: #1b1b1b
-}
-
+._0_discuss_document_btn,
 .smw {
     background-color: var(--button-color);
     border-radius: 10px;
@@ -676,20 +669,28 @@ a.wiki-nw-link {
     max-width: max-content;
     position: relative;
     margin: 10px auto 0;
-    user-select: none
+    user-select: none;
+    color: #1b1b1b;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+._0_discuss_document_btn:hover,
+.smw:hover {
+    background-color: var(--button-hover-color);
+    color: #1b1b1b;
 }
 
 ._0_discuss_document_btn svg,
 .smw svg {
-    transition: all .3s ease
+    transition: transform .3s ease;
 }
 
 ._0_discuss_document_btn:hover svg {
-    transform: translateX(5px)
+    transform: translateX(5px);
 }
 
 .smw:hover svg {
-    transform: translateX(3px)
+    transform: translateX(3px);
 }
 
 .ks-tooltip-body {
