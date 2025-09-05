@@ -47,6 +47,18 @@ A polished, animated glassmorphism theme for the Kagi search engine. Clean UI, s
 - Podcasts Tab
 ![Podcasts](images/podcasts.png)
 
+- Mobile Assistant Chat
+![Mobile Assistant Chat](images/mobile-assistant-chat.png)
+
+- Mobile Assistant Dropdown
+![Mobile Assistant Dropdown](images/mobile-assistant-dropdown.png)
+
+- Mobile Assistant Sidebar
+![Mobile Assistant Sidebar](images/mobile-assistant-sidebar.png)
+
+- Mobile Assistant Interface
+![Mobile Assistant Interface](images/mobile-interface-assistant.png)
+
 ## Overview
 
 kagi-css is a custom stylesheet that gives Kagi a refined glassmorphism look with smooth transitions and a cohesive UI.
