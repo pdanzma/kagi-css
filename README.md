@@ -109,6 +109,10 @@ Good news: The character limit for CSS in Kagi has been increased to 40,000, so 
 
 ### 08. September 2025
 
+**Main Fix**
+A long-standing “layer problem” has finally been elegantly solved for Desktop. 
+![Wiki Hot Fix](images/wiki-hot-fix.gif)
+
 **Small Bug Fix**
 Uploaded Files in the assistant now have a hover effect.
 ![Hover Effect Files](images/files-prompt-box.gif)
