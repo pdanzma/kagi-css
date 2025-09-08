@@ -107,23 +107,37 @@ If you encounter problems with glass morphing in Firefox, this is not a problem 
 
 Good news: The character limit for CSS in Kagi has been increased to 40,000, so the old workaround with add-ons is no longer necessary and the all-in-one solution can be used directly. Thank you, Kagi team! 
 
-### 05. September 2025
+### 08. September 2025
 
-**Major Update**
-The Quick Answer got a new background (not clearly visible because of compression)
-![New Quick Answer](images/quick-answer.gif)
+**Small Bug Fix**
+Uploaded Files in the assistant now have a hover effect.
+![Hover Effect Files](images/files-prompt-box.gif)
 
+The following issues have also been fixed:
+- Dropdown now has correct height
+- Hover effect for uploaded items
+- “Reddit comments” and “Comments” buttons now have a smooth hover effect and box shadow
+- “More results” button with hover effect
+- Link texts now have a smooth transition when hovering
 
-- Percentage display now matches the source reference.
-- Fixed a bug that prevented Quick Settings from being clicked.
-- The source pop-up now matches the style of the search results.
-- The style in the Assistant now matches the Quick Answers.
-- The hover effect for "A look into the past" now matches the global styling.
-- Hover boxes in Quick Answers are now displayed correctly (though it's not a perfect solution - noticeable when scrolling).
-- The style has now also been applied to the video and podcast sections.
-- The lens dropdown menu now adapts to the styling.
-- Now supports lenses in the search bar.
+## Roadmap
 
+### Near-term
+- [x] Accessibility contrast pass (WCAG AA) and focus-visible tweaks
+- [ ] Optional compact density mode (tighter paddings and gaps)
+- [~] Always update to the latest changes of Kagi
+- [ ] Fix z-index bugs
+
+### Mid-term
+- [ ] Theme variants: Light (have to update it), Dark+ (already there, see https://github.com/realrogue/kagi-darker), automatic light/dark mode switch
+- [x] Per-tab refinements (Images, Video, News, Podcasts)
+- [x] Reduced motion mode (prefers-reduced-motion support)
+- [ ] Improved mobile layout and touch targets
+
+## Tips & Notes
+
+- Mobile: The theme is responsive, but visual density differs from desktop; adjust variables if desired.
+- Not affiliated with Kagi. This is a community theme.
 
 If you still experience severe performance drops due to the various glass morphing effects, you can also search for the rules in the CSS and explicitly set them to none. Here's how:
 ```css
@@ -144,27 +158,6 @@ If you still experience severe performance drops due to the various glass morphi
 /* should look like this after: */
    background: rgb(30, 32, 40);
 ```
-
-A big thank you to @Temanor on Discord, who sent me lots of bugs with pictures.
-
-## Roadmap
-
-### Near-term
-- [x] Accessibility contrast pass (WCAG AA) and focus-visible tweaks
-- [ ] Optional compact density mode (tighter paddings and gaps)
-- [~] Always update to the latest changes of Kagi
-- [ ] Fix z-index bugs
-
-### Mid-term
-- [ ] Theme variants: Light (have to update it), Dark+ (already there, see https://github.com/realrogue/kagi-darker), automatic light/dark mode switch
-- [x] Per-tab refinements (Images, Video, News, Podcasts)
-- [x] Reduced motion mode (prefers-reduced-motion support)
-- [ ] Improved mobile layout and touch targets
-
-## Tips & Notes
-
-- Mobile: The theme is responsive, but visual density differs from desktop; adjust variables if desired.
-- Not affiliated with Kagi. This is a community theme.
 
 ## Known Bugs
 

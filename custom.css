@@ -155,6 +155,20 @@ html {
     color: var(--primary-50);
 }
 
+.right-content-box {
+    position: relative;
+    z-index: var(--z-base) !important;
+    transition: margin-left .5s ease;
+}
+
+body:has(#domainInfoModal.ranked-box-overlay.--open) .right-content-box {
+    margin-left: 23rem;
+}
+
+body:has(.__sri_more_menu._0_k_ui_dropdown.k_ui_dropdown[aria-expanded="true"]) .right-content-box {
+    margin-left: 20rem;
+}
+
 .widget-simple .__domain-name {
     background-color: var(--time-stamp);
     color: var(--primary-700);
@@ -391,11 +405,13 @@ a.wiki-nw-link {
     color: #1b1b1b;
     border-radius: 10px;
     padding: 5px;
-    margin: 0 auto
+    margin: 0 auto;
+    transition: background-color .3s ease;
 }
 
 .result-comments .comment:hover {
-    background-color: var(--button-hover-color)
+    background-color: var(--button-hover-color);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .2)
 }
 
 .top_podcast_item:hover {
@@ -598,7 +614,8 @@ a.wiki-nw-link {
 }
 
 .wikipediaResult a {
-    color: var(--button-color)
+    color: var(--button-color);
+    transition: color .3s ease;
 }
 
 .wikipediaResult a:hover {
@@ -1279,6 +1296,22 @@ sup a .tooltip {
 #uploadedItems .item,
 [data-files] .item {
     background-color: var(--primary-100);
+    transition: background-color .3s ease, box-shadow .3s ease;
+}
+
+#uploadedItems .name, #uploadedItems .type, #uploadedItems .icon {
+    transition: color .3s ease
+}
+
+#uploadedItems .item:hover .name,
+#uploadedItems .item:hover .type,
+#uploadedItems .item:hover .icon {
+    color: var(--secondary);
+}
+
+#uploadedItems .item:hover {
+    background-color: var(--primary);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
 }
 
 .upgrade-banner .info {
@@ -1349,7 +1382,6 @@ sup a .tooltip {
     min-height: 120px;
     opacity: 0;
     transform: translateY(0);
-    will-change: opacity, transform;
     animation: fadeInCLS 0.3s ease-out forwards;
 }
 
@@ -1454,7 +1486,9 @@ sup a .tooltip {
 .k_ui_dropdown[aria-expanded=true] .k_ui_dropdown_data_list, 
 .app_nav_dropdown .k_ui_dropdown_data_list {
     background: rgb(30, 32, 40);
-    z-index: var(--z-dropdown);
+    z-index: var(--z-critical);
+    width: max-content;
+    height: max-content;
 } 
 
 .auto_suggestions .auto_suggestions_lens_path {
@@ -1500,14 +1534,28 @@ sup a .tooltip {
 }
 
 ._0_app_theme_switch_box>label {
-    transition: background .3s ease;
+    transition: background-color .3s ease;
 }
 
 ._0_app_theme_switch_box>label:hover {
-    background: #2a2d38;
+    background-color: #2a2d38;
 }
 
 .citation .source {
     background: #17191e;
     padding: 4px 6px;
+}
+
+.landing-category-select {
+    z-index: var(--z-base)
+}
+
+.widgetItems.box-less .widget_more_menu_box .k_ui_dropdown_data_list {
+    height: max-content;
+    border: 1px solid var(--as-dd-border);
+    border-radius: 12px;
+    box-shadow: 1px 8px 30px 0 rgba(0, 0, 0, .09);
+    gap: 6px;
+    padding-block: 20px;
+    padding-inline: 10px;
 }
