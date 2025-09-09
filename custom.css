@@ -161,12 +161,24 @@ html {
     transition: margin-left .5s ease;
 }
 
+html[data-path="/news"] .ranked-box-wrapper {
+    margin-left: 1rem;
+}
+
+html[data-path="/videos"] .ranked-box-wrapper {
+    margin-left: -23rem;
+}
+
 body:has(#domainInfoModal.ranked-box-overlay.--open) .right-content-box {
     margin-left: 23rem;
 }
 
 body:has(.__sri_more_menu._0_k_ui_dropdown.k_ui_dropdown[aria-expanded="true"]) .right-content-box {
     margin-left: 20rem;
+}
+
+body._0_auto-sug .land_adv_search_btn {
+    visibility: hidden;
 }
 
 .widget-simple .__domain-name {
@@ -656,6 +668,12 @@ a.wiki-nw-link {
         background-color .3s ease,
         box-shadow .3s ease;
     user-select: none
+}
+
+@supports (-webkit-appearance: none) and (not (-moz-appearance: none)) {
+    ._0_results_summary_link_to_IA i svg {
+        vertical-align: inherit;
+    }
 }
 
 ._0_results_summary_link_to_IA:hover,
@@ -1193,11 +1211,6 @@ sup a .tooltip {
     transition: background-color .3s ease, color .3s ease
 }
 
-.newsResultItem .newsResultTime:hover {
-    background-color: var(--primary);
-    color: #1b1b1b
-}
-
 /* Videosection */
 .videoResultItem {
     background-color: #1e2028
@@ -1235,6 +1248,25 @@ sup a .tooltip {
 
 .videoResultItem .videoResultRight .videoResultInfo {
     padding: 10px;
+}
+
+.videos .top_media_item {
+    background-color: var(--secondary);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color .3s ease;
+}
+
+.videos .top_media_item:hover {
+    background-color: var(--primary);
+}
+
+.top_media_item_title {
+    transition: color .3s ease
+}
+
+.videos .top_media_item:hover .top_media_item_title {
+    color: var(--secondary);
 }
 
 /* Podcastsection */
@@ -1471,21 +1503,16 @@ sup a .tooltip {
 :not(dialog)>.thread-more-menu, dialog,
 .dropdown .dd-list, ._0_copied_tooltip, 
 .chat_bubble .message-info, .filter-item .k_ui_dropdown_data_list {
-    background: rgba(30, 32, 40, 0.32);
-    backdrop-filter: blur(12px) saturate(120%);
-    -webkit-backdrop-filter: blur(12px) saturate(120%);
+    background: rgb(30, 32, 40);
     border: 1px solid rgba(255, 255, 255, 0.28);
     background-clip: padding-box;
-
-    transform: var(--gpu-acceleration);
-    -webkit-transform: var(--gpu-acceleration);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 .k_ui_dropdown[aria-expanded=true] .k_ui_dropdown_data_list, 
 .app_nav_dropdown .k_ui_dropdown_data_list {
     background: rgb(30, 32, 40);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
     z-index: var(--z-critical);
     width: max-content;
     height: max-content;
@@ -1558,4 +1585,14 @@ sup a .tooltip {
     gap: 6px;
     padding-block: 20px;
     padding-inline: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Tempalte for tablet */
+}
+
+@media (max-width: 767px) {
+    ._0_summarize_link a {
+        overflow: hidden;
+    }
 }
