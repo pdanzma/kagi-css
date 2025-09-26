@@ -1,15 +1,7 @@
-```text
-   _____ _                                          _     _               
-  / ____| |                                        | |   (_)              
- | |  __| | __ _ ___ ___ _ __ ___   ___  _ __ _ __ | |__  _ ___ _ __ ___  
- | | |_ | |/ _` / __/ __| '_ ` _ \ / _ \| '__| '_ \| '_ \| / __| '_ ` _ \ 
- | |__| | | (_| \__ \__ \ | | | | | (_) | |  | |_) | | | | \__ \ | | | | |
-  \_____|_|\__,_|___/___/_| |_| |_|\___/|_|  | .__/|_| |_|_|___/_| |_| |_|
-                                             | |                          
-                                             |_|                          
-                                                                                                                                                                                                  
-Kagi Search — Custom Glassmorphism CSS
-```
+<p align="center">    
+<strong>Kage CSS (影 = Shadow) — Custom Glassmorphism CSS</strong>
+<p>
+
 A polished, animated glassmorphism theme for the Kagi search engine. Clean UI, subtle motion, consistent styling across results, images, videos, news, and podcasts.
 
 ## Gallery (Static Images)
@@ -47,18 +39,6 @@ A polished, animated glassmorphism theme for the Kagi search engine. Clean UI, s
 - Podcasts Tab
 ![Podcasts](images/podcasts.png)
 
-- Mobile Assistant Chat
-![Mobile Assistant Chat](images/mobile-assistant-chat.png)
-
-- Mobile Assistant Dropdown
-![Mobile Assistant Dropdown](images/mobile-assistant-dropdown.png)
-
-- Mobile Assistant Sidebar
-![Mobile Assistant Sidebar](images/mobile-assistant-sidebar.png)
-
-- Mobile Assistant Interface
-![Mobile Assistant Interface](images/mobile-interface-assistant.png)
-
 ## Overview
 
 kagi-css is a custom stylesheet that gives Kagi a refined glassmorphism look with smooth transitions and a cohesive UI.
@@ -80,9 +60,12 @@ kagi-css is a custom stylesheet that gives Kagi a refined glassmorphism look wit
 3) Paste the entire CSS into the input field.
 4) Save and refresh Kagi.
 
-Recommended setting: Set URL placement to “Above Title” under Appearance for best visual alignment.
+Recommended setting: Set URL placement to “Above Title” under Appearance for best visual alignment. (With the latest update, the theme can now be used without the following setting.)
 
 ![URL Positioning](images/url-positioning.png)
+
+> [!IMPORTANT]
+> The theme only works correctly if you set it to dark mode.
 
 If you encounter problems with glass morphing in Firefox, this is not a problem and does not prevent you from using this theme. Simply comment out the following code.
 
@@ -97,6 +80,16 @@ If you encounter problems with glass morphing in Firefox, this is not a problem 
 } delete this ---> */ 
 ```
 
+## Donation
+
+This theme took a great deal of time to get to the level it is at today. I don't expect any payment and did everything purely to support the Kagi Network. If you use one of my themes and would like to support me financially, you are welcome to do so via the button below.
+
+I am very grateful for every donation! If you would like your name to be displayed below as a sponsor, feel free to write to me on Discord or Reddit, and I will add you here as a sponsor.
+
+The theme will continue to be updated, even without a single donation! This is just meant to be an option, not an obligation. A donation does not unlock any additional features or a "special version" of the theme.
+
+<a href="https://buymeacoffee.com/pdanzma" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
 ## Animations
 
 - Results fade-in as they load
@@ -107,41 +100,15 @@ If you encounter problems with glass morphing in Firefox, this is not a problem 
 
 Good news: The character limit for CSS in Kagi has been increased to 40,000, so the old workaround with add-ons is no longer necessary and the all-in-one solution can be used directly. Thank you, Kagi team! 
 
-### 08. September 2025
+### 25. August 2025
 
-**Main Fix**
-A long-standing “layer problem” has finally been elegantly solved for Desktop. 
-![Wiki Hot Fix](images/wiki-hot-fix.gif)
-
-**Small Bug Fix**
-Uploaded Files in the assistant now have a hover effect.
-![Hover Effect Files](images/files-prompt-box.gif)
-
-The following issues have also been fixed:
-- Dropdown now has correct height
-- Hover effect for uploaded items
-- “Reddit comments” and “Comments” buttons now have a smooth hover effect and box shadow
-- “More results” button with hover effect
-- Link texts now have a smooth transition when hovering
-
-## Roadmap
-
-### Near-term
-- [x] Accessibility contrast pass (WCAG AA) and focus-visible tweaks
-- [ ] Optional compact density mode (tighter paddings and gaps)
-- [~] Always update to the latest changes of Kagi
-- [ ] Fix z-index bugs
-
-### Mid-term
-- [ ] Theme variants: Light (have to update it), Dark+ (already there, see https://github.com/realrogue/kagi-darker), automatic light/dark mode switch
-- [x] Per-tab refinements (Images, Video, News, Podcasts)
-- [x] Reduced motion mode (prefers-reduced-motion support)
-- [ ] Improved mobile layout and touch targets
-
-## Tips & Notes
-
-- Mobile: The theme is responsive, but visual density differs from desktop; adjust variables if desired.
-- Not affiliated with Kagi. This is a community theme.
+Massive update that puts nearly all existing elements to the test and fundamentally restructures them. The best new features:
+- Automatically disables systemwide animations for users who have enabled “Reduce motion” in their system settings - Increased accessibility.
+- Explicit Firefox blur effect generation can now be disabled.
+- Background animation now forces GPU acceleration
+- Blur effects are now generated by the GPU instead of the CPU → significantly improves performance (GPU acceleration)
+- CLS-safe fade-in animation
+- Significantly fewer transitions: all […]
 
 If you still experience severe performance drops due to the various glass morphing effects, you can also search for the rules in the CSS and explicitly set them to none. Here's how:
 ```css
@@ -163,9 +130,27 @@ If you still experience severe performance drops due to the various glass morphi
    background: rgb(30, 32, 40);
 ```
 
-## Known Bugs
+A big thank you to @Temanor on Discord, who sent me lots of bugs with pictures.
 
-- z-indexes are below the Wikipedia article in the first search results
+## Roadmap
+
+### Near-term
+- [ ] Reduce the performance impact
+- [ ] Optional compact density mode (tighter paddings and gaps)
+- [ ] Fix z-index bugs
+
+### Mid-term
+- [ ] Improved mobile layout and touch targets
+
+### Omnipresent
+
+- [ ] Always update to the latest changes of Kagi
+- [ ] Adapt bug report from discord thread
+
+## Tips & Notes
+
+- Mobile: The theme is responsive, but visual density differs from desktop; adjust variables if desired.
+- Not affiliated with Kagi. This is a community theme.
 
 ## Contributing
 
